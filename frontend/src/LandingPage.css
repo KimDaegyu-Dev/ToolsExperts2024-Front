@@ -1,0 +1,201 @@
+small {
+  /* 7월 4주차 */
+
+  position: absolute;
+  width: 70px;
+  height: 15px;
+  left: 142px;
+  top: 95px;
+
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 12px;
+
+  color: #000000;
+}
+h1 {
+  /* 지금 주목받고 있는 전시회 BEST 5 */
+
+  position: absolute;
+  width: 265px;
+  height: 60px;
+  left: 142px;
+  top: 112px;
+
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+
+  color: #000000;
+}
+.bestContainer {
+  position: absolute;
+  display: flex; /* Flexbox 사용 */
+  justify-content: space-between; /* 아이템 간격 균등 */
+  align-items: center; /* 수직 가운데 정렬 */
+  gap: 20px; /* 아이템 간격 */
+  top: 222px;
+  left: 144px;
+}
+.bestBox {
+  background: #ececec;
+  border-radius: 12px;
+  width: 293px;
+  height: 198px;
+  gap: 0px;
+  opacity: 0px;
+}
+.bestBox p:first-of-type {
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.6px;
+  text-align: left;
+  padding: 10px;
+}
+.bestBox p:nth-of-type(2) {
+  font-family: Pretendard;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 13.2px;
+  text-align: left;
+  padding: 10px;
+}
+hr {
+  /* Line 1 */
+
+  position: absolute;
+  width: 996px;
+  height: 0px;
+  left: 142px;
+  top: 456px;
+
+  border: 2px solid #dedede;
+}
+.calender-icon {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 144px;
+  top: 466px;
+  color: #9f9f9f;
+}
+.calender-text {
+  /* 2024. 07. 21 */
+
+  position: absolute;
+  width: 80px;
+  height: 21px;
+  left: 181px;
+  top: 468px;
+
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #000000;
+}
+.location-icon {
+  /* location_on */
+
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  top: 466px;
+  left: 297px;
+  gap: 0px;
+  opacity: 0px;
+
+  color: #9f9f9f;
+}
+.location-text {
+  /* 부산광역시 전체 */
+
+  position: absolute;
+  width: 90px;
+  height: 21px;
+  left: 333px;
+  top: 468px;
+
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #000000;
+}
+.location-arrow {
+  /* arrow_back_ios */
+
+  position: absolute;
+  width: 40px;
+  height: 25px;
+  top: 480px;
+  left: 427px;
+
+  color: #929292;
+}
+.filter {
+  /* 필터 */
+
+  position: absolute;
+  width: 80px;
+  height: 21px;
+  left: 144px;
+  top: 510px;
+
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #727272;
+}
+
+.listContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  gap: 20px;
+  top: 550px;
+  left: 144px;
+}
+.listItem {
+  display: flex; /* 수평 정렬을 위한 Flexbox */
+  align-items: center; /* 수직 가운데 정렬 */
+}
+.listBox {
+  background: #ececec;
+  border-radius: 12px;
+  width: 183px;
+  height: 183px;
+}
+.listText {
+  margin-left: 20px;
+}
+.listText p:first-of-type {
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.6px;
+  text-align: left;
+  padding: 10px;
+}
+.listText p:nth-of-type(2) {
+  font-family: Pretendard;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 13.2px;
+  text-align: left;
+  padding: 10px;
+}
