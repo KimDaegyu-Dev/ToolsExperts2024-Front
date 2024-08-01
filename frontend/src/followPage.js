@@ -134,70 +134,70 @@ function FollowPage() {
  {/* 4th */}
       <div>
         <div className="box4" style={{top: '745px', left:'710px'}}></div>
-        <div className="title4">스웨덴 국립미술관 컬렉션</div>
+        <div className="title4" style={{top: '745px', left:'925px'}}>스웨덴 국립미술관 컬렉션</div>
         <i className="material-icons" style={{
           position: 'absolute',
           width: '17px',
           height: '17px',
           top: '770px',
-          left: '357px',
+          left: '922px',
           color: 'black'
           }}>
             location_on
           </i>
-        <div className="place4">마이아트뮤지엄</div>
+        <div className="place4" style={{top: '777px', left:'948px'}}>마이아트뮤지엄</div>
         <CiHeart className="heart4" style={{
           position: 'absolute',
-          top: '460px',
-          left: '806px'
+          top: '745px',
+          left: '1215px'
         }}/>
-        <div className="date4">2024.06.05 ~2024.09.18</div>
+        <div className="date4" style={{top: '900px', left:'1105px'}}>2024.06.05 ~2024.09.18</div>
       </div>
 
  {/* 5th */}
       <div>
-        <div className="box5"></div>
-        <div className="title5">스웨덴 국립미술관 컬렉션</div>
+        <div className="box5" style={{top: '1000px', left:'710px'}}></div>
+        <div className="title5" style={{top: '1000px', left:'925px'}}>스웨덴 국립미술관 컬렉션</div>
         <i className="material-icons" style={{
           position: 'absolute',
           width: '17px',
           height: '17px',
-          top: '770px',
-          left: '357px',
+          top: '1025px',
+          left: '922px',
           color: 'black'
           }}>
             location_on
           </i>
-        <div className="place5">마이아트뮤지엄</div>
+        <div className="place5" style={{top: '1032px', left:'948px'}}>마이아트뮤지엄</div>
         <CiHeart className="heart5" style={{
           position: 'absolute',
-          top: '460px',
-          left: '806px'
+          top: '1000px',
+          left: '1215px'
         }}/>
-        <div className="date5">2024.06.05 ~2024.09.18</div>
+        <div className="date5" style={{top: '1155px', left:'1105px'}}>2024.06.05 ~2024.09.18</div>
       </div>
 
  {/* 6th */}
       <div>
-        <div className="box6"></div>
-        <div className="title6">스웨덴 국립미술관 컬렉션</div>
+        <div className="box6" style={{top: '1255px', left:'710px'}}></div>
+        <div className="title6" style={{top: '1255px', left:'925px'}}>스웨덴 국립미술관 컬렉션</div>
         <i className="material-icons" style={{
           position: 'absolute',
           width: '17px',
           height: '17px',
-          top: '770px',
-          left: '357px',
+          top: '1280px',
+          left: '922px',
           color: 'black'
           }}>
             location_on
           </i>
-        <div className="place6">마이아트뮤지엄</div>
+        <div className="place6" style={{top: '1287px', left:'948px'}}>마이아트뮤지엄</div>
         <CiHeart className="heart6" style={{
           position: 'absolute',
-          top: '460px',
-          left: '806px'
+          top: '1255px',
+          left: '1215px'
         }}/>
-        <div className="date6">2024.06.05 ~2024.09.18</div>
+        <div className="date6" style={{top: '1410px', left:'1105px'}}>2024.06.05 ~2024.09.18</div>
       </div>
 
     </>
