@@ -74,6 +74,7 @@
 .circle5 { left: 652px; }
 
 .mini {
+  position: absolute;
   width: 13px;
   height: 13px;
   top: 295px;
@@ -114,6 +115,8 @@
 .box {
   width: 380px;
   height: 183px;
+  left: 145px;
+  top: 460px;
   background: #ECECEC;
   border-radius: 12px;
 }
