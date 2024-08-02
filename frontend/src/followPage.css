@@ -14,16 +14,24 @@
   line-height: 36px;
 }
 
-.author {
+.author, .gallery {
   position: absolute;
-  width: 89px;
   height: 19px;
   top: 160px;
-  left: 145px;
   font-weight: 500;
   font-size: 19px;
   line-height: 22.8px;
   color: #000000;
+}
+
+.author {
+  width: 89px;
+  left: 145px;
+}
+
+.gallery {
+  width: 121px;
+  left: 661px;
 }
 
 .firstHr {
@@ -42,57 +50,30 @@
   left: 658px;
 }
 
-.gallery {
-  position: absolute;
-  width: 121px;
-  height: 19px;
-  top: 160px;
-  left: 661px;
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 22.8px;
-  color: #000000;
-}
-
-.container-horizontal {
+.container-horizontal, .name-horizontal {
   display: flex;
   justify-content: center;
-  box-sizing: border-box;
 }
 
-.circle1,
-.circle2,
-.circle3,
-.circle4,
-.circle5 {
+.circle, .box, .title, .place, .heart, .date {
   position: absolute;
+}
+
+.circle {
   width: 90px;
   height: 90px;
   top: 224px;
   border-radius: 50%;
   background-color: #D9D9D9;
-
 }
 
-.circle1 {
-  border: 2px solid #4E80FF;
-  left: 144px;
-}
-.circle2 {
-  left: 271px;
-}
-.circle3 {
-  left: 398px;
-}
-.circle4 {
-  left: 525px;
-}
-.circle5 {
-  left: 652px;
-}
+.circle1 { border: 2px solid #4E80FF; left: 144px; }
+.circle2 { left: 271px; }
+.circle3 { left: 398px; }
+.circle4 { left: 525px; }
+.circle5 { left: 652px; }
 
 .mini {
-  position: absolute;
   width: 13px;
   height: 13px;
   top: 295px;
@@ -101,137 +82,69 @@
   border-radius: 50%;
 }
 
-.name-horizontal {
-  display: flex;
-  justify-content: center;
-}
-
-.name1,
-.name2,
-.name3,
-.name4,
-.name5 {
+.name {
   position: absolute;
   height: 19px;
   top: 322px;
   line-height: 15.6px;
   font-size: 13px;
   font-weight: 500;
-  
 }
 
-.name1 {
-  left: 160px;
-  width: 70px;
-  color: #414141;
-}
-.name2 {
-  left: 283px;
-  width: 80px;
-  color: #7E7E7E;
-}
-.name3 {
-  left: 414px;
-  width: 80px;
-  color: #7E7E7E;
-}
-.name4 {
-  left: 543px;
-  width: 80px;
-  color: #7E7E7E;
-}
-.name5 {
-  left: 677px;
-  width: 80px;
-  color: #7E7E7E;
-}
+.name1 { left: 160px; width: 70px; color: #414141; }
+.name2 { left: 283px; width: 80px; color: #7E7E7E; }
+.name3 { left: 414px; width: 80px; color: #7E7E7E; }
+.name4 { left: 543px; width: 80px; color: #7E7E7E; }
+.name5 { left: 677px; width: 80px; color: #7E7E7E; }
 
-.subTitle1 {
-position: absolute;
-width: 136px;
-height: 19px;
-left: 145px;
-top: 415px;
-font-weight: 700;
-font-size: 15px;
-line-height: 18px;
-color: #353535;
-}
-
-.subTitle2 {
+.subTitle1, .subTitle2 {
   position: absolute;
   width: 136px;
   height: 19px;
   left: 145px;
-  top: 700px;
   font-weight: 700;
   font-size: 15px;
   line-height: 18px;
   color: #353535;
 }
 
+.subTitle1 { top: 415px; }
+.subTitle2 { top: 700px; }
+
 .box {
-  position: absolute;
   width: 380px;
   height: 183px;
-  left: 145px;
-  top: 460px;
   background: #ECECEC;
   border-radius: 12px;
 }
 
-.collection,
-.title1,
-.title2,
-.title3,
-.title4,
-.title5,
-.title6 {
-position: absolute;
-width: 210px;
-height: 47px;
-font-weight: 600;
-font-size: 18px;
-line-height: 21.6px;
-color: #000000;
+.collection {
+  position: absolute;
+  width: 210px;
+  height: 47px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #000000;
 }
 
-
-.place,
-.place1,
-.place2,
-.place3,
-.place4,
-.place5,
-.place6 {
-position: absolute;
-width: 100px;
-height: 16px;
-font-weight: 400;
-font-size: 13px;
-line-height: 13.2px;
-color: #000000;
+.place {
+  position: absolute;
+  width: 100px;
+  height: 16px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 13.2px;
+  color: #000000;
 }
 
-.heart,
-.heart1,
-.heart2,
-.heart3,
-.heart4,
-.heart5,
-.heart6 {
-position: absolute;
-width: 23px;
-height: 23px;
+.heart {
+  position: absolute;
+  width: 23px;
+  height: 23px;
 }
 
-.date,
-.date1,
-.date2,
-.date3,
-.date4,
-.date5,
-.date6 {
+.date {
   position: absolute;
   width: 139px;
   height: 21px;
@@ -241,16 +154,18 @@ height: 23px;
   color: #000000;
 }
 
-.box1,
-.box2,
-.box3,
-.box4,
-.box5,
-.box6 {
-position: absolute;
-width: 183px;
-height: 183px;
-background: #ECECEC;
-border-radius: 12px;
+.box1, .box2, .box3, .box4, .box5, .box6 {
+  width: 183px;
+  height: 183px;
+  background: #ECECEC;
+  border-radius: 12px;
 }
 
+.title, .title1, .title2, .title3, .title4, .title5, .title6 {
+  width: 210px;
+  height: 47px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21.6px;
+  color: #000000;
+}
