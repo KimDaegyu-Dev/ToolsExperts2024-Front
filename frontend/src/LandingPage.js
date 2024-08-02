@@ -1,8 +1,6 @@
 import React from "react";
 import "./LandingPage.css";
-import { FaCalendar } from "react-icons/fa"; //달력 아이콘
-import { FaLocationDot } from "react-icons/fa6"; // 위치 아이콘
-import { IoIosArrowDown } from "react-icons/io"; //화살표? 아이콘
+import locationDot from "./assets/location_on.png"; // 위치 아이콘
 
 const data1 = [
   {
@@ -10,7 +8,7 @@ const data1 = [
     content: "전시회 이름 1",
     location: (
       <>
-        <FaLocationDot />
+        <img src={locationDot} alt="location" />
         위치 1
       </>
     ),
@@ -20,7 +18,7 @@ const data1 = [
     content: "전시회 이름 2",
     location: (
       <>
-        <FaLocationDot />
+        <img src={locationDot} alt="location" />
         위치 2
       </>
     ),
@@ -30,7 +28,7 @@ const data1 = [
     content: "전시회 이름 3",
     location: (
       <>
-        <FaLocationDot />
+        <img src={locationDot} alt="location" />
         위치 3
       </>
     ),
@@ -42,7 +40,7 @@ const data2 = [
     content: "전시회 이름 1",
     location: (
       <>
-        <FaLocationDot />
+        <img src={locationDot} alt="location" />
         위치 1
       </>
     ),
@@ -52,7 +50,7 @@ const data2 = [
     content: "전시회 이름 2",
     location: (
       <>
-        <FaLocationDot />
+        <img src={locationDot} alt="location" />
         위치 2
       </>
     ),
@@ -62,7 +60,7 @@ const data2 = [
     content: "전시회 이름 3",
     location: (
       <>
-        <FaLocationDot />
+        <img src={locationDot} alt="location" />
         위치 3
       </>
     ),
@@ -72,7 +70,37 @@ const data2 = [
     content: "전시회 이름 4",
     location: (
       <>
-        <FaLocationDot />
+        <img src={locationDot} alt="location" />
+        위치 4
+      </>
+    ),
+  },
+  {
+    id: 5,
+    content: "전시회 이름 4",
+    location: (
+      <>
+        <img src={locationDot} alt="location" />
+        위치 4
+      </>
+    ),
+  },
+  {
+    id: 6,
+    content: "전시회 이름 4",
+    location: (
+      <>
+        <img src={locationDot} alt="location" />
+        위치 4
+      </>
+    ),
+  },
+  {
+    id: 7,
+    content: "전시회 이름 4",
+    location: (
+      <>
+        <img src={locationDot} alt="location" />
         위치 4
       </>
     ),
@@ -113,13 +141,13 @@ function LandingPage() {
       </div>
       <hr />
       <div>
-        <FaCalendar className="calender-icon" />
+        {/* <FaCalendar className="calender-icon" /> */}
         <p className="calender-text">2024.07.21</p>
       </div>
       <div>
-        <FaLocationDot className="location-icon" />
+        {/* <FaLocationDot className="location-icon" /> */}
         <p className="location-text">부산광역시 전체</p>
-        <IoIosArrowDown className="location-arrow" />
+        {/* <IoIosArrowDown className="location-arrow" /> */}
       </div>
       <div className="filter">필터</div>
       <div className="listContainer">

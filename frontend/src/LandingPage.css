@@ -163,7 +163,9 @@ hr {
 .listContainer {
   position: absolute;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 996px;
   /* justify-content: space-between; */
   /* align-items: center; */
   gap: 20px;
