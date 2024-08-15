@@ -4,13 +4,13 @@ small {
   position: absolute;
   width: 70px;
   height: 15px;
-  left: 142px;
-  top: 95px;
+  left: 205px;
+  top: 70px;
 
   font-family: "Pretendard";
   font-style: normal;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 12px;
 
   color: #000000;
@@ -21,8 +21,8 @@ h1 {
   position: absolute;
   width: 265px;
   height: 60px;
-  left: 142px;
-  top: 112px;
+  left: 205px;
+  top: 68px;
 
   font-family: "Pretendard";
   font-style: normal;
@@ -37,51 +37,80 @@ h1 {
   display: flex; /* Flexbox 사용 */
   justify-content: space-between; /* 아이템 간격 균등 */
   align-items: center; /* 수직 가운데 정렬 */
-  gap: 20px; /* 아이템 간격 */
-  top: 222px;
-  left: 144px;
+  gap: 38px; /* 아이템 간격 */
+  top: 210px;
+  left: 208px;
 }
 .bestBox {
   background: #ececec;
   border-radius: 12px;
-  width: 293px;
-  height: 198px;
-  gap: 0px;
-  opacity: 0px;
+  width: 330px;
+  height: 225px;
 }
-.bestBox p:first-of-type {
+.best-content {
+  position: relative;
+  top: -10px;
+  left: 5px;
+  width: 200px;
   font-family: Pretendard;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
   line-height: 21.6px;
-  text-align: left;
+  /* text-align: left; */
   padding: 10px;
 }
-.bestBox p:nth-of-type(2) {
+.best-heart {
+  position: absolute;
+  top: 6px;
+  left: 287px;
+}
+.best-locationIcon {
+  position: relative;
+  top: -35px;
+  left: 14px;
+}
+.best-location {
+  position: relative;
+  top: -60px;
+  left: 35px;
   font-family: Pretendard;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
-  line-height: 13.2px;
+  line-height: 1px;
   text-align: left;
-  padding: 10px;
+}
+.best-period {
+  position: relative;
+  top: 75px;
+  left: 165px;
+  font-family: Pretendard;
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1px;
+  text-align: left;
+}
+.arrow-icon1 {
+  position: absolute;
+  top: 313px;
+  left: 1315px;
 }
 hr {
   /* Line 1 */
 
   position: absolute;
-  width: 996px;
+  width: 1120px;
   height: 0px;
-  left: 142px;
-  top: 456px;
+  left: 206px;
+  top: 465px;
 
   border: 2px solid #dedede;
 }
 .calender-icon {
   position: absolute;
-  width: 22px;
-  height: 22px;
-  left: 144px;
-  top: 466px;
+  width: 25px;
+  height: 25px;
+  left: 209px;
+  top: 486px;
   color: #9f9f9f;
 }
 .calender-text {
@@ -90,13 +119,13 @@ hr {
   position: absolute;
   width: 80px;
   height: 21px;
-  left: 181px;
-  top: 468px;
+  left: 250px;
+  top: 475px;
 
   font-family: "Pretendard";
   font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 15px;
   line-height: 17px;
 
   color: #000000;
@@ -105,40 +134,36 @@ hr {
   /* location_on */
 
   position: absolute;
-  width: 23px;
-  height: 23px;
-  top: 466px;
-  left: 297px;
+  width: 25px;
+  top: 486px;
+  left: 382px;
   gap: 0px;
-  opacity: 0px;
-
-  color: #9f9f9f;
+  opacity: 40%;
 }
 .location-text {
   /* 부산광역시 전체 */
 
   position: absolute;
-  width: 90px;
+  width: 150px;
   height: 21px;
-  left: 333px;
-  top: 468px;
+  left: 420px;
+  top: 478px;
 
   font-family: "Pretendard";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 14px;
   line-height: 17px;
 
   color: #000000;
 }
-.location-arrow {
-  /* arrow_back_ios */
-
+.arrow-icon2 {
   position: absolute;
-  width: 40px;
-  height: 25px;
-  top: 480px;
-  left: 427px;
+  top: 493px;
+  left: 530px;
+  rotate: 90deg;
+  width: 7px;
+  opacity: 60%;
 
   color: #929292;
 }
@@ -148,8 +173,8 @@ hr {
   position: absolute;
   width: 80px;
   height: 21px;
-  left: 144px;
-  top: 510px;
+  top: 538px;
+  left: 208px;
 
   font-family: "Pretendard";
   font-style: normal;
@@ -158,6 +183,11 @@ hr {
   line-height: 17px;
 
   color: #727272;
+}
+.pageInfo {
+  position: absolute;
+  top: 538px;
+  left: 1290px;
 }
 
 .listContainer {
@@ -168,9 +198,10 @@ hr {
   width: 996px;
   /* justify-content: space-between; */
   /* align-items: center; */
-  gap: 20px;
-  top: 550px;
-  left: 144px;
+  column-gap: 200px;
+  row-gap: 45px;
+  top: 630px;
+  left: 208px;
 }
 .listItem {
   display: flex; /* 수평 정렬을 위한 Flexbox */
@@ -185,7 +216,10 @@ hr {
 .listText {
   margin-left: 20px;
 }
-.listText p:first-of-type {
+.list-content {
+  position: relative;
+  top: -15px;
+  left: 0px;
   font-family: Pretendard;
   font-size: 18px;
   font-weight: 600;
@@ -193,11 +227,33 @@ hr {
   text-align: left;
   padding: 10px;
 }
-.listText p:nth-of-type(2) {
+.list-heart {
+  position: absolute;
+  top: 8px;
+  left: 315px;
+}
+.list-locationIcon {
+  position: relative;
+  top: -35px;
+  left: 10px;
+}
+.list-location {
+  position: relative;
+  top: -78px;
+  left: 20px;
   font-family: Pretendard;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 13.2px;
   text-align: left;
   padding: 10px;
 }
+.list-period {
+  position: relative;
+  top: 0px;
+  left: 160px;
+}
+
+/* .bestBox.period {
+  text-align: right;
+} */
