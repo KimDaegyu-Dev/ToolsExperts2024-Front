@@ -1,3 +1,4 @@
+
 * {
   font-family: 'Pretendard', Arial;
 }
@@ -74,7 +75,7 @@
 .circle5 { left: 652px; }
 
 .mini {
-  position: absolute;
+  position:absolute;
   width: 13px;
   height: 13px;
   top: 295px;
@@ -82,7 +83,7 @@
   background-color: #4E80FF;
   border-radius: 50%;
 }
-
+ 
 .name {
   position: absolute;
   height: 19px;
@@ -112,6 +113,7 @@
 .subTitle1 { top: 415px; }
 .subTitle2 { top: 700px; }
 
+/* 첫 번째 박스 유지 */
 .box {
   width: 380px;
   height: 183px;
@@ -121,18 +123,36 @@
   border-radius: 12px;
 }
 
+/* 작은 사이즈로 통일된 나머지 박스들 */
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10 {
+  width: 183px;
+  height: 183px;
+  background: #ECECEC;
+  border-radius: 12px;
+}
+
+/* 첫 번째 박스 제목 */
 .collection {
-  position: absolute;
   width: 210px;
   height: 47px;
   font-weight: 600;
   font-size: 18px;
   line-height: 21.6px;
   color: #000000;
+  position: absolute;
 }
 
-.place {
-  position: absolute;
+/* 나머지 박스들의 제목 */
+.title1, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10 {
+  width: 300px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 16.8px;
+  color: #000000;
+}
+
+/* 장소 스타일 */
+.place1, .place2, .place3, .place4, .place5, .place6, .place7, .place8, .place9, .place10 {
   width: 100px;
   height: 16px;
   font-weight: 400;
@@ -141,34 +161,19 @@
   color: #000000;
 }
 
-.heart {
+/* 하트 이모티콘 위치 */
+.heart1, .heart2, .heart3, .heart4, .heart5, .heart6, .heart7, .heart8, .heart9, .heart10 {
   position: absolute;
-  width: 23px;
-  height: 23px;
+  top: 745px; /* 작은 박스의 상단 위치 */
+  left: 300px; /* 작은 박스에 맞게 위치 조정 */
 }
 
-.date {
-  position: absolute;
+/* 날짜 스타일 */
+.date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10 {
   width: 139px;
   height: 21px;
   font-weight: 400;
   font-size: 12px;
   line-height: 14px;
-  color: #000000;
-}
-
-.box1, .box2, .box3, .box4, .box5, .box6 {
-  width: 183px;
-  height: 183px;
-  background: #ECECEC;
-  border-radius: 12px;
-}
-
-.title, .title1, .title2, .title3, .title4, .title5, .title6 {
-  width: 210px;
-  height: 47px;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 21.6px;
   color: #000000;
 }
