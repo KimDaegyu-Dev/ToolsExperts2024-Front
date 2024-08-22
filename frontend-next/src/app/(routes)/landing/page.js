@@ -1,10 +1,10 @@
 import React from "react";
 import "./LandingPage.css";
-import locationDot from "../../public/assets/location_on.png"; // 위치 아이콘
-import calender from "../../public/assets/calender.png"; // 달력 아이콘
-import heart from "../../public/assets/heart.png"; // 하트 아이콘
-import arrow from "../../public/assets/arrow.png"; // 화살표 아이콘
-import info from "../../public/assets/page_info.png"; //
+import locationDot from "../../../../public/assets/location_on.png"; // 위치 아이콘
+import calender from "../../../../public/assets/calender.png"; // 달력 아이콘
+import heart from "../../../../public/assets/heart.png"; // 하트 아이콘
+import arrow from "../../../../public/assets/arrow.png"; // 화살표 아이콘
+import info from "../../../../public/assets/page_info.png"; //
 const data1 = [
   {
     id: "best1",
