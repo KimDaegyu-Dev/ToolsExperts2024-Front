@@ -4,7 +4,7 @@
 }
 
 
-.title, .place, .heart, .date {
+.title, .place, .heart, .date, .box{
   position: absolute;
 }
 
