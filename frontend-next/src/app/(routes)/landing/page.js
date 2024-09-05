@@ -81,9 +81,9 @@ function Best({ content, location, period }) {
     <div className="bestBox">
       <p className="best-content">
         {content}
-        <img className="best-heart" src={heart} alt="heart" />
+        <Image className="best-heart" src={heart} alt="heart" />
       </p>
-      <img className="best-locationIcon" src={locationDot} alt="location" />
+      <Image className="best-locationIcon" src={locationDot} alt="location" />
       <p className="best-location">{location}</p>
       <p className="best-period">{period}</p>
     </div>
@@ -96,9 +96,9 @@ function List({ content, location, period }) {
       <div className="listText">
         <p className="list-content">
           {content}
-          <img className="list-heart" src={heart} alt="heart" />
+          <Image className="list-heart" src={heart} alt="heart" />
         </p>
-        <img className="list-locationIcon" src={locationDot} alt="location" />
+        <Image className="list-locationIcon" src={locationDot} alt="location" />
         <p className="list-location">{location}</p>
         <p className="list-period">{period}</p>
       </div>
@@ -124,20 +124,20 @@ function LandingPage() {
           />
         ))}
       </div>
-      <img className="arrow-icon1" src={arrow} alt="arrow" />
+      <Image className="arrow-icon1" src={arrow} alt="arrow" />
       <hr />
       <div>
-        <img className="calender-icon" src={calender} alt="달력 아이콘" />
+        <Image className="calender-icon" src={calender} alt="달력 아이콘" />
         <p className="calender-text">2024.07.21</p>
       </div>
       <div>
-        <img className="location-icon" src={locationDot} alt="location" />
+        <Image className="location-icon" src={locationDot} alt="location" />
         <p className="location-text">부산광역시 전체</p>
-        <img className="arrow-icon2" src={arrow} alt="arrow" />
+        <Image className="arrow-icon2" src={arrow} alt="arrow" />
         {/* <IoIosArrowDown className="location-arrow" /> */}
       </div>
       <div className="filter">필터</div>
-      <img className="pageInfo" src={info} alt="page info" />
+      <Image className="pageInfo" src={info} alt="page info" />
       <div className="listContainer">
         {data2.map((item) => (
           <List
