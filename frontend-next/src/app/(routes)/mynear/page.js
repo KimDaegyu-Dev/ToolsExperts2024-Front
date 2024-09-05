@@ -1,7 +1,16 @@
 import React from "react";
-import "./followPage.css";
+import "./myNearPage.css";
 import heartImage from "../../../../public/assets/prime_heart.png";
+import calendar from "../../../../public/assets/calendar.png";
+import position from "../../../../public/assets/position.png";
+import arrow from "../../../../public/assets/arrow.png";
+import close from "../../../../public/assets/close.png";
+import map from "../../../../public/assets/map.png";
+import target from "../../../../public/assets/target.png";
+import positionred from "../../../../public/assets/positionred.png";
+import filter from "../../../../public/assets/filter.png";
 import Image from "next/image";
+
 
 const exhibits = [
  
@@ -65,68 +74,49 @@ const exhibits = [
     title: "스웨덴 국립미술관 컬렉션",
     place: "마이아트뮤지엄",
     date: "2024.06.05 ~ 2024.09.18",
-  }
+  },
 ];
 
-const FollowPage = () => (
+const MynearPage = () => (
   <>
-    <div className="subList">구독 목록</div>
+    
     {/* 상단 부분 */}
     <div>
-      <h1 className="author">작가</h1>
-      <hr className="firstHr" />
-      <hr className="secondHr" />
-      <h2 className="gallery">갤러리/전시장</h2>
+    <Image src={calendar} alt="calendar" className="calendar" style={{ top: "90px", left: "145px" }} />
+    <div className="datef" style={{ top: "100px", left: "190px" }}>
+        2024. 07. 21
+    </div>
+    <Image src={position} alt="position" className="position" style={{ top: "90px", left: "330px" }} />
+    <div className="placef" style={{ top: "100px", left: "370px" }}>
+        부산광역시 전체
+    </div>
+    <Image src={arrow} alt="arrow" className="arrow" style={{ top: "100px", left: "505px" }} />
+    <div className="filter-text" style={{ top: "150px", left: "145px" }}>
+        필터
     </div>
     <div className="container-horizontal">
       {[...Array(5)].map((_, i) => (
         <div key={i} className={`circle circle${i + 1}`}></div>
       ))}
-      <div className="mini"></div>
     </div>
-    <div className="name-horizontal">
-      {["리움미술관", "아모레퍼시픽", "예술의 전당", "대림미술관", "SETEC"].map(
-        (name, i) => (
-          <div key={i} className={`name name${i + 1}`}>
-            {name}
-          </div>
-        )
-      )}
+
+    <div className="close-horizontal">
+      {[...Array(5)].map((_, i) => (
+        <Image 
+        key={i} 
+        src={close} 
+        className={`close close${i + 1}`} 
+      />
+      ))}
     </div>
-    
-    {/* 새로운 전시 부분 */}
-    <div>
-      <div className="subTitle1">새로운 전시</div>
-      <div className="box"></div>
-      <div className="collection" style={{ top: "460px", left: "560px" }}>
-        스웨덴 국립미술관 컬렉션
-      </div>
-      <i
-        className="material-icons"
-        style={{
-          position: "absolute",
-          width: "17px",
-          height: "17px",
-          top: "489px",
-          left: "558px",
-          color: "black",
-        }}
-      >
-        location_on
-      </i>
-      <div className="place" style={{ top: "490px", left: "585px" }}>
-        마이아트뮤지엄
-      </div>
-      <Image src={heartImage} alt="heart" className="heart" style={{ top: "460px", left: "855px", color:'#ffffff' }} />
-      <div className="date" style={{ top: "620px", left: "694px" }}>
-        2024.06.05 ~ 2024.09.18
-      </div>
+
+    <Image src={map} alt="map" className="map" />
+    <Image src={target} alt="target" className="target" />
+    <Image src={positionred} alt="positionred" className="positionred" />
+    <Image src={filter} alt="filter" className="filter" />
     </div>
     
-    {/* 지난 전시 목록 */}
-    <div>
-      <div className="subTitle2">지난 전시 목록</div>
-    </div>
+    {/* 전시목록 배열 10개 */}
     {exhibits.map((exhibit, i) => (
       <div key={i}>
         <div
@@ -190,4 +180,6 @@ const FollowPage = () => (
   </>
 );
 
-export default FollowPage;
+export default MynearPage;
+
+
