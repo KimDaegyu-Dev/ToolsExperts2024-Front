@@ -1,0 +1,167 @@
+
+* {
+  font-family: 'Pretendard', Arial;
+}
+
+
+.title, .place, .heart, .date, .box{
+  position: absolute;
+}
+
+
+/* 작은 사이즈로 통일된 박스들 */
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10 {
+  width: 183px;
+  height: 183px;
+  background: #ECECEC;
+  border-radius: 12px;
+}
+
+/* 나머지 박스들의 제목 */
+.title1, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10 {
+  width: 300px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 16.8px;
+  color: #000000;
+}
+
+/* 장소 스타일 */
+.place1, .place2, .place3, .place4, .place5, .place6, .place7, .place8, .place9, .place10 {
+  width: 100px;
+  height: 16px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 13.2px;
+  color: #000000;
+}
+
+/* 하트 이모티콘 위치 */
+.heart1, .heart2, .heart3, .heart4, .heart5, .heart6, .heart7, .heart8, .heart9, .heart10 {
+  position: absolute;
+  top: 745px; /* 작은 박스의 상단 위치 */
+  left: 300px; /* 작은 박스에 맞게 위치 조정 */
+}
+
+/* 날짜 스타일 */
+.date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10 {
+  width: 139px;
+  height: 21px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: #000000;
+}
+
+.calendar {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.datef {
+  position: absolute;
+  width: 139px;
+  height: 25px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 10px;
+  color: #000000;
+}
+
+.position {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.placef {
+  position: absolute;
+  width: 139px;
+  height: 25px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 10px;
+  color: #000000;
+}
+
+.arrow {
+  position: absolute;
+  width: 15px;
+  height: 10px;
+}
+
+.filter-text {
+  position: absolute;
+  width: 139px;
+  height: 25px;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 10px;
+  color: #000000;
+}
+
+.circle {
+  position: absolute;
+  width: 122px;
+  height: 26px;
+  top: 140px;
+  border-radius: 13px;
+  background-color: #4E80FF;
+}
+
+.circle1 { left: 210px; }
+.circle2 { left: 360px; }
+.circle3 { left: 520px; }
+.circle4 { left: 670px; }
+.circle5 { left: 820px; }
+
+.container-horizontal, .close-horizontal {
+  display: flex;
+  justify-content: center;
+}
+
+.close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: 142px;
+}
+
+.close1 { left: 305px; }
+.close2 { left: 455px; }
+.close3 { left: 610px; }
+.close4 { left: 760px; }
+.close5 { left: 910px; }
+
+.map {
+  position: absolute;
+  width: 1120px;
+  height: 490px;
+  top: 200px;
+  left: 142px;
+}
+
+.target {
+  position: absolute;
+  width: 37px;
+  height: 37px;
+  top: 640px;
+  left: 160px;
+}
+
+.filter {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  top: 140px;
+  left: 1220px;
+}
+
+.positionred {
+  position: absolute;
+  width: 33px;
+  height: 33px;
+  top: 437px;
+  left: 825px;
+}  
