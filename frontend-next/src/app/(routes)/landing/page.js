@@ -5,6 +5,7 @@ import calender from "../../../../public/assets/calender.png"; // 달력 아이�
 import heart from "../../../../public/assets/heart.png"; // 하트 아이콘
 import arrow from "../../../../public/assets/arrow.png"; // 화살표 아이콘
 import info from "../../../../public/assets/page_info.png"; //
+import Image from "next/image";
 const data1 = [
   {
     id: "best1",
