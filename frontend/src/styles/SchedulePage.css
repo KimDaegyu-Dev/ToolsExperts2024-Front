@@ -24,14 +24,24 @@ body {
     width: 12px;
     height: 21px;
     top: 108px;
-    left: 223px;
+    left: 290px;
+    color: #4A4A4A;
+    transform: scaleX(-1);
+}
+
+.arrow_next_ios {
+    position: absolute;
+    width: 12px;
+    height: 21px;
+    top: 108px;
+    left: 320px;
     color: #4A4A4A;
 }
 
 .container {
     width: 100%;
-    max-width: 1200px;
-    padding: 20px;
+    max-width: 1500px;
+    padding: 10px;
     background-color: white;
     margin-top: 50px;
 }
@@ -43,7 +53,7 @@ body {
 }
 
 .calendar td {
-    width: 800px;
+    width: 165px;
     height: 100px;
     border: 1px solid #E0E0E0;
     position: relative;
@@ -55,8 +65,31 @@ body {
     text-align: right;
     padding: 5px;
     font-size: 16px;
-    z-index: 1;
     color: white;
+    z-index: 2;
+}
+
+.day-container {
+    position: relative;
+    text-align: right;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.Ellipse-today {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 20px;
+    height: 20px;
+    background-color: #4E80FF;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.day-number {
+    position: relative;
+    z-index: 2;
 }
 
 .day {
@@ -64,17 +97,6 @@ body {
     text-align: right;
     padding: 5px;
     font-size: 16px;
-    z-index: 1;
-}
-
-.Ellipse-today {
-    position: absolute;
-    top: 5px;
-    right: 2px;
-    width: 20px;
-    height: 20px;
-    background-color: #4E80FF;
-    border-radius: 50%;
 }
 
 .first-plan {
@@ -101,19 +123,20 @@ body {
     color: #898989;
 }
 
+.first-Rectangle-container {
+    position: relative;
+    margin-top: 10px;
+}
+
 .first-Rectangle {
-    position: absolute;
-    top: 25px;
-    left: 0px;
-    width: 695px;
+    width: 113%;
     height: 3px;
     background-color: #4E80FF;
-    z-index: 2;
 }
 
 .second-plan {
     position: relative;
-    margin-top: 40px;
+    margin-top: 10px;
     padding-left: 10px;
 }
 
@@ -133,35 +156,15 @@ body {
     line-height: 12px;
     text-align: left;
     color: #898989;
+}
 
+.second-Line-container {
+    position: relative;
+    margin-top: 10px;
 }
 
 .second-Line {
-    position: absolute;
-    top: 50px;
-    left: 0px;
-    width: 345px;
+    width: 113%;
     height: 3px;
-    background-color: #4E80FF;
-    z-index: 2;
-}
-
-.next-Rectangle{
-    position: absolute;
-    top: 25px;
-    left: 0px;
-    width: 505px;
-    height: 3px;
-    background-color: #4E80FF;
-    z-index: 2;
-}
-
-.next-Line{
-    position: absolute;
-    top: 50px;
-    left: 0px;
-    width: 330px;
-    height: 3px;
-    background-color: #4E80FF;
-    z-index: 2;
+    background-color: #C6D6FF;
 }
