@@ -1,4 +1,4 @@
-small {
+small .small {
   /* 7월 4주차 */
 
   position: absolute;
@@ -134,7 +134,8 @@ hr {
   /* location_on */
 
   position: absolute;
-  width: 25px;
+  width: 26px;
+  height: 26px;
   top: 486px;
   left: 382px;
   gap: 0px;
@@ -159,15 +160,16 @@ hr {
 }
 .arrow-icon2 {
   position: absolute;
-  top: 493px;
+  top: 494px;
   left: 530px;
   rotate: 90deg;
   width: 7px;
+  height: 13px;
   opacity: 60%;
 
   color: #929292;
 }
-.filter {
+.filter-text {
   /* 필터 */
 
   position: absolute;
@@ -183,6 +185,24 @@ hr {
   line-height: 17px;
 
   color: #727272;
+}
+.filter {
+  position: relative;
+  width: 122px;
+  height: 26px;
+  top: 528px;
+  left: 275px;
+  gap: 0px;
+  border-radius: 13px;
+  opacity: 0px;
+  background: #4e80ff;
+}
+.close {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 4px;
+  left: 98px;
 }
 .pageInfo {
   position: absolute;

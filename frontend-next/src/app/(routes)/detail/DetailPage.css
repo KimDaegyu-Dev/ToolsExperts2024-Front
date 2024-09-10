@@ -114,8 +114,8 @@
   position: absolute;
   width: 97px;
   height: 72px;
-  top: -10px;
-  left: 20px;
+  top: 10px;
+  left: 130px;
   gap: 0px;
   opacity: 0px;
 
@@ -131,7 +131,7 @@
   width: 31px;
   height: 31px;
   top: 140px;
-  left: -145px;
+  left: 100px;
   gap: 0px;
   opacity: 0px;
 }
