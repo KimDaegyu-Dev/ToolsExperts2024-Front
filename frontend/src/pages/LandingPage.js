@@ -1,5 +1,5 @@
 import React from "react";
-// import "./LandingPage.css";
+import "../styles/LandingPage.css";
 import locationDot from "../assets/location_on.png"; // 위치 아이콘
 import calender from "../assets/calender.png"; // 달력 아이콘
 import heart from "../assets/heart.png"; // 하트 아이콘

@@ -1,5 +1,5 @@
 import React from "react";
-// import "./myNearPage.css";
+import "../styles/MyNearPage.css";
 import heartImage from "../assets/prime_heart.png";
 import calendar from "../assets/calendar.png";
 import position from "../assets/position.png";

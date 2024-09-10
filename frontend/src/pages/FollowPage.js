@@ -1,5 +1,5 @@
 import React from "react";
-// import "./followPage.css";
+import "../styles/FollowPage.css";
 import heartImage from "../assets/prime_heart.png";
 
 const exhibits = [
