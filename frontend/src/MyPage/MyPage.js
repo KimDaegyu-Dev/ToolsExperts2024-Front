@@ -1,6 +1,6 @@
 import React from "react";
 import "./MyPage.css";
-import roundHeart from "./assets/roundHeart.png";
+// import roundHeart from "./assets/roundHeart.png";
 
 function MyPage() {
   return (
@@ -23,15 +23,15 @@ function MyPage() {
         </div>
         <div className="myPage">마이페이지</div>
         <div className="BookmarkBox">
-          <img className="roundHeart" src={roundHeart} alt="roundHeart" />
+          {/* <img className="roundHeart" src={roundHeart} alt="roundHeart" /> */}
           <p>내가 찜해놓은 전시</p>
         </div>
         <div className="PreviousReviewBox">
-          <img className="roundHeart" src={roundHeart} alt="roundHeart" />
+          {/* <img className="roundHeart" src={roundHeart} alt="roundHeart" /> */}
           <p>지난 리뷰 작성</p>
         </div>
         <div className="MyReviewBox">
-          <img className="roundHeart" src={roundHeart} alt="roundHeart" />
+          {/* <img className="roundHeart" src={roundHeart} alt="roundHeart" /> */}
           <p>내가 남긴 리뷰</p>
         </div>
         <div className="logout">로그아웃</div>

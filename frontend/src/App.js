@@ -1,7 +1,9 @@
-// import LandingPage from "./LandingPage";
+import { Router } from "./routes/Router";
 
-// function App() {
-//   return <LandingPage />;
-// }
+const App = () => (
+  <>
+    <Router />
+  </>
+);
 
-// export default App;
+export default App;
