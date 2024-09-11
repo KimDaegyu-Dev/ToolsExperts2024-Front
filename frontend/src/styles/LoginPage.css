@@ -1,25 +1,27 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #ECECEC;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     height: 100vh;
 }
 
 .login-container {
-    background-color: white;
-    padding: 40px;
+    background-color: #ECECEC;
+    padding: 60px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 380px;
+    margin-top: 150px;
 }
 
 h1 {
-    margin-bottom: 30px;
-    font-size: 36px;
+    margin-bottom: 50px;
+    font-size: 60px;
     color: #000000;
+    font-weight: bold;
 }
 
 form {
@@ -28,23 +30,25 @@ form {
     align-items: center;
 }
 
-input[type="text"], input[type="password"] {
+input[type="id"], input[type="password"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 25px;
+    background-color: #ECECEC;
+    border: 1px solid #929292;
     border-radius: 25px;
-    font-size: 16px;
+    font-size: 18px;
+    color: #8C8C8C;
 }
 
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #5A67D8;
+    padding: 15px;
+    background-color: #4E80FF;
     border: none;
     border-radius: 25px;
-    color: white;
-    font-size: 16px;
+    color: #DADADA;
+    font-size: 20px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -54,14 +58,15 @@ button:hover {
 }
 
 .options {
-    margin-top: 20px;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     font-size: 14px;
+    color: #535353;
 }
 
 .options a {
-    color: #666666;
+    color: #535353;
     text-decoration: none;
 }
 
