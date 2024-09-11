@@ -111,7 +111,7 @@ function LandingPage() {
     <>
       <div>
         <small>7월 4주차</small>
-        <h1>지금 주목받고 있는 전시회 BEST 5</h1>
+        <h1>지금 주목받고 있는 전시회 BEST 3</h1>
       </div>
       <div className="bestContainer">
         {data1.map((item) => (
@@ -124,7 +124,6 @@ function LandingPage() {
           />
         ))}
       </div>
-      <img className="arrow-icon1" src={arrow} alt="arrow" />
       <hr />
       <div>
         <img className="calender-icon" src={calender} alt="달력 아이콘" />

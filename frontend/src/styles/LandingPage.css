@@ -1,11 +1,11 @@
-small .small {
+small {
   /* 7월 4주차 */
 
   position: absolute;
   width: 70px;
   height: 15px;
-  left: 205px;
-  top: 70px;
+  left: 222px;
+  top: 110px;
 
   font-family: "Pretendard";
   font-style: normal;
@@ -19,15 +19,15 @@ h1 {
   /* 지금 주목받고 있는 전시회 BEST 5 */
 
   position: absolute;
-  width: 265px;
+  width: 320px;
   height: 60px;
-  left: 205px;
-  top: 68px;
+  left: 220px;
+  top: 108px;
 
   font-family: "Pretendard";
   font-style: normal;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 27px;
   line-height: 36px;
 
   color: #000000;
@@ -38,8 +38,8 @@ h1 {
   justify-content: space-between; /* 아이템 간격 균등 */
   align-items: center; /* 수직 가운데 정렬 */
   gap: 38px; /* 아이템 간격 */
-  top: 210px;
-  left: 208px;
+  top: 255px;
+  left: 15%;
 }
 .bestBox {
   background: #ececec;
@@ -101,7 +101,7 @@ hr {
   width: 1120px;
   height: 0px;
   left: 206px;
-  top: 465px;
+  top: 500px;
 
   border: 2px solid #dedede;
 }
@@ -110,7 +110,7 @@ hr {
   width: 25px;
   height: 25px;
   left: 209px;
-  top: 486px;
+  top: 530px;
   color: #9f9f9f;
 }
 .calender-text {
@@ -120,7 +120,7 @@ hr {
   width: 80px;
   height: 21px;
   left: 250px;
-  top: 475px;
+  top: 530px;
 
   font-family: "Pretendard";
   font-style: normal;
@@ -136,7 +136,7 @@ hr {
   position: absolute;
   width: 26px;
   height: 26px;
-  top: 486px;
+  top: 530px;
   left: 382px;
   gap: 0px;
   opacity: 40%;
@@ -148,7 +148,7 @@ hr {
   width: 150px;
   height: 21px;
   left: 420px;
-  top: 478px;
+  top: 530px;
 
   font-family: "Pretendard";
   font-style: normal;
