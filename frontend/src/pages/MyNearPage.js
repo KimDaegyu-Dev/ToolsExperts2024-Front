@@ -3,7 +3,7 @@ import "../styles/MyNearPage.css";
 import heartImage from "../assets/prime_heart.png";
 import calendar from "../assets/calendar.png";
 import position from "../assets/position.png";
-import arrow from "../assets/arrow.png";
+import arrowDown from "../assets/arrowDown.png";
 import close from "../assets/close.png";
 import map from "../assets/map.png";
 import target from "../assets/target.png";
@@ -97,9 +97,9 @@ const MyNearPage = () => (
         부산광역시 전체
       </div>
       <img
-        src={arrow}
-        alt="arrow"
-        className="arrow"
+        src={arrowDown}
+        alt="arrowDown"
+        className="arrowDown"
         style={{ top: "100px", left: "505px" }}
       />
       <div className="filter-text" style={{ top: "150px", left: "145px" }}>

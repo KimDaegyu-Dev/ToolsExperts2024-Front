@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/FollowPage.css";
 import heartImage from "../assets/prime_heart.png";
+import locationDot from "../assets/location_on.png"; 
 
 const exhibits = [
   {
@@ -48,18 +49,6 @@ const exhibits = [
   },
   {
     id: 8,
-    title: "스웨덴 국립미술관 컬렉션",
-    place: "마이아트뮤지엄",
-    date: "2024.06.05 ~ 2024.09.18",
-  },
-  {
-    id: 9,
-    title: "스웨덴 국립미술관 컬렉션",
-    place: "마이아트뮤지엄",
-    date: "2024.06.05 ~ 2024.09.18",
-  },
-  {
-    id: 10,
     title: "스웨덴 국립미술관 컬렉션",
     place: "마이아트뮤지엄",
     date: "2024.06.05 ~ 2024.09.18",
