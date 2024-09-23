@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -6,165 +6,165 @@ body {
     justify-content: center;
     align-items: flex-start;
     background-color: white;
-}
+} */
 
 .month {
-    position: absolute;
-    width: 225px;
-    height: 60px;
-    top: 95px;
-    left: 144px;
-    font-family: Pretendard, sans-serif;
-    font-size: 30px;
-    font-weight: 700;
+  position: absolute;
+  width: 225px;
+  height: 60px;
+  top: 95px;
+  left: 144px;
+  font-family: Pretendard, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 .arrow_back_ios {
-    position: absolute;
-    width: 12px;
-    height: 21px;
-    top: 108px;
-    left: 290px;
-    color: #4A4A4A;
-    transform: scaleX(-1);
+  position: absolute;
+  width: 12px;
+  height: 21px;
+  top: 108px;
+  left: 290px;
+  color: #4a4a4a;
+  transform: scaleX(-1);
 }
 
 .arrow_next_ios {
-    position: absolute;
-    width: 12px;
-    height: 21px;
-    top: 108px;
-    left: 320px;
-    color: #4A4A4A;
+  position: absolute;
+  width: 12px;
+  height: 21px;
+  top: 108px;
+  left: 320px;
+  color: #4a4a4a;
 }
 
 .container {
-    width: 100%;
-    max-width: 1500px;
-    padding: 10px;
-    background-color: white;
-    margin-top: 50px;
+  width: 100%;
+  max-width: 1500px;
+  padding: 10px;
+  background-color: white;
+  margin-top: 50px;
 }
 
 .calendar {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 100px;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 100px;
 }
 
 .calendar td {
-    width: 165px;
-    height: 100px;
-    border: 1px solid #E0E0E0;
-    position: relative;
-    vertical-align: top;
+  width: 165px;
+  height: 100px;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  vertical-align: top;
 }
 
 .today {
-    position: relative;
-    text-align: right;
-    padding: 5px;
-    font-size: 16px;
-    color: white;
-    z-index: 2;
+  position: relative;
+  text-align: right;
+  padding: 5px;
+  font-size: 16px;
+  color: white;
+  z-index: 2;
 }
 
 .day-container {
-    position: relative;
-    text-align: right;
-    padding: 5px;
-    font-size: 16px;
+  position: relative;
+  text-align: right;
+  padding: 5px;
+  font-size: 16px;
 }
 
 .Ellipse-today {
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    width: 20px;
-    height: 20px;
-    background-color: #4E80FF;
-    border-radius: 50%;
-    z-index: 1;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 20px;
+  height: 20px;
+  background-color: #4e80ff;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .day-number {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .day {
-    position: relative;
-    text-align: right;
-    padding: 5px;
-    font-size: 16px;
+  position: relative;
+  text-align: right;
+  padding: 5px;
+  font-size: 16px;
 }
 
 .first-plan {
-    position: relative;
-    margin-top: 10px;
-    padding-left: 10px;
+  position: relative;
+  margin-top: 10px;
+  padding-left: 10px;
 }
 
 .first-Ellipse {
-    width: 5px;
-    height: 5px;
-    background-color: #4E80FF;
-    border-radius: 50%;
-    display: inline-block;
-    vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  background-color: #4e80ff;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .first-title {
-    font-family: Pretendard;
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 12px;
-    text-align: left;
-    color: #898989;
+  font-family: Pretendard;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  text-align: left;
+  color: #898989;
 }
 
 .first-Rectangle-container {
-    position: relative;
-    margin-top: 10px;
+  position: relative;
+  margin-top: 10px;
 }
 
 .first-Rectangle {
-    width: 113%;
-    height: 3px;
-    background-color: #4E80FF;
+  width: 113%;
+  height: 3px;
+  background-color: #4e80ff;
 }
 
 .second-plan {
-    position: relative;
-    margin-top: 10px;
-    padding-left: 10px;
+  position: relative;
+  margin-top: 10px;
+  padding-left: 10px;
 }
 
 .second-Circle {
-    width: 5px;
-    height: 5px;
-    background-color: #C6D6FF;
-    border-radius: 50%;
-    display: inline-block;
-    vertical-align: middle;
+  width: 5px;
+  height: 5px;
+  background-color: #c6d6ff;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .second-title {
-    font-family: Pretendard;
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 12px;
-    text-align: left;
-    color: #898989;
+  font-family: Pretendard;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  text-align: left;
+  color: #898989;
 }
 
 .second-Line-container {
-    position: relative;
-    margin-top: 10px;
+  position: relative;
+  margin-top: 10px;
 }
 
 .second-Line {
-    width: 113%;
-    height: 3px;
-    background-color: #C6D6FF;
+  width: 113%;
+  height: 3px;
+  background-color: #c6d6ff;
 }

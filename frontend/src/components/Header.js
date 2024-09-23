@@ -1,23 +1,36 @@
-import '../styles/Header.css'
+import "../styles/Header.css";
 import search from "../assets/search.png";
 import heart from "../assets/heart.png";
 import profile from "../assets/profile.png";
-export default function Header(){
-    return(
-        <header className="header">
-                <div className="logo"></div>
-                <ul>
-                    <li><a href="#">전시 추천</a></li>
-                    <li><a href="#">팔로우</a></li>
-                    <li><a href="#">내 근처</a></li>
-                    <li><a href="#">일정별</a></li>
-                </ul>
-                <div className="search"></div>
-                <div className="header-icons">
-                    <a href="#"><img className="search-icon" src={search} alt="search" /></a>
-                    <a href="#"><img className="heart-icon" src={heart} alt="heart" /></a>
-                    <a href="#"><img className="profile-icon" src={profile} alt="profile" /></a>
-                </div>
-            </header>
-    )
+import { Link } from "react-router-dom";
+export default function Header() {
+  return (
+    <header className="header">
+      <Link to="/" className="logo">
+        {/* <div className="logo"></div> */}
+      </Link>
+      <ul>
+        <li>
+          <Link to="/">전시 추천</Link>
+        </li>{" "}
+        <li>
+          <Link to="/follow">팔로우</Link>{" "}
+        </li>{" "}
+        <li>
+          <Link to="/mynear">내 근처</Link>{" "}
+        </li>{" "}
+        <li>
+          <Link to="/schedule">일정별</Link>{" "}
+        </li>
+      </ul>
+      <div className="user-bar">
+        <div className="search"></div>
+        <div className="header-icons">
+          <img className="search-icon" src={search} alt="search" />
+          <img className="heart-icon" src={heart} alt="heart" />
+          <img className="profile-icon" src={profile} alt="profile" />
+        </div>
+      </div>
+    </header>
+  );
 }
