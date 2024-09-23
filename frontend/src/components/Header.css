@@ -43,13 +43,13 @@ li {
 }
 .search {
   /* position: relative; */
-  width: 91px;
+  width: 540px;
   height: 26px;
   /* top: 100px;
   left: 50px; */
   gap: 0px;
   border-radius: 13px;
-  background: #252323;
+  background: #ececec;
 }
 /* .search-icon {
   position: absolute;

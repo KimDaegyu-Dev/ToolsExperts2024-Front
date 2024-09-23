@@ -1,4 +1,4 @@
-import "../styles/Header.css";
+import "./Header.css";
 import search from "../assets/search.png";
 import heart from "../assets/heart.png";
 import profile from "../assets/profile.png";
@@ -24,9 +24,10 @@ export default function Header() {
         </li>
       </ul>
       <div className="user-bar">
-        <div className="search"></div>
-        <div className="header-icons">
+        <div className="search">
           <img className="search-icon" src={search} alt="search" />
+        </div>
+        <div className="header-icons">
           <img className="heart-icon" src={heart} alt="heart" />
           <img className="profile-icon" src={profile} alt="profile" />
         </div>

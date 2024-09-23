@@ -1,10 +1,9 @@
 import React from "react";
 import "../styles/LandingPage.css";
 import locationDot from "../assets/location_on.png"; // 위치 아이콘
-import calender from "../assets/calender.png"; // 달력 아이콘
 import heart from "../assets/heart.png"; // 하트 아이콘
-import arrow from "../assets/arrow.png"; // 화살표 아이콘
-import info from "../assets/page_info.png"; //
+import Filter from "../components/Filter";
+import Card from "../components/Card";
 const data1 = [
   {
     id: "best1",
@@ -89,23 +88,6 @@ function Best({ content, location, period }) {
     </div>
   );
 }
-function List({ content, location, period }) {
-  return (
-    <div className="listItem">
-      <div className="listBox"></div>
-      <div className="listText">
-        <p className="list-content">
-          {content}
-          <img className="list-heart" src={heart} alt="heart" />
-        </p>
-        <img className="list-locationIcon" src={locationDot} alt="location" />
-        <p className="list-location">{location}</p>
-        <p className="list-period">{period}</p>
-      </div>
-    </div>
-  );
-}
-
 function LandingPage() {
   return (
     <>
@@ -125,21 +107,10 @@ function LandingPage() {
         ))}
       </div>
       <hr />
-      <div>
-        <img className="calender-icon" src={calender} alt="달력 아이콘" />
-        <p className="calender-text">2024.07.21</p>
-      </div>
-      <div>
-        <img className="location-icon" src={locationDot} alt="location" />
-        <p className="location-text">부산광역시 전체</p>
-        <img className="arrow-icon2" src={arrow} alt="arrow" />
-        {/* <IoIosArrowDown className="location-arrow" /> */}
-      </div>
-      <div className="filter">필터</div>
-      <img className="pageInfo" src={info} alt="page info" />
+      <Filter />
       <div className="listContainer">
         {data2.map((item) => (
-          <List
+          <Card
             key={item.id}
             content={item.content}
             location={item.location}
