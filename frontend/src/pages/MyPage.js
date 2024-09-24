@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/MyPage.css";
+// import "../styles/MyPage.css";
 import roundHeart from "../assets/roundHeart.png";
 
 function MyPage() {

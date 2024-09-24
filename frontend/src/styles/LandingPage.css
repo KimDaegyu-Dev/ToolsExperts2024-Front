@@ -112,12 +112,6 @@ hr {
   top: 4px;
   left: 98px;
 }
-.pageInfo {
-  position: absolute;
-  top: 538px;
-  left: 1290px;
-}
-
 .listContainer {
   position: absolute;
   display: flex;

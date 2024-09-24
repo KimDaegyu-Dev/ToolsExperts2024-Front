@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../styles/SchedulePage.css";
+// import "../styles/SchedulePage.css";
 import arrow_back_ios from "../assets/arrow_back_ios.png";
 import Ellipse from "../assets/Ellipse.png";
 import Circle from "../assets/Circle.png";

@@ -1,6 +1,6 @@
 import React from "react";
-import locationDot from "../assets/location_on.png"; // 위치 아이콘
-import heart from "../assets/heart.png"; // 하트 아이콘
+import locationDot from "../../assets/location_on.png"; // 위치 아이콘
+import heart from "../../assets/heart.png"; // 하트 아이콘
 import "./Card.css";
 export default function Card({ content, location, period }) {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/FollowPage.css";
 import heartImage from "../assets/prime_heart.png";
 import locationDot from "../assets/location_on.png";
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
 
 const exhibits = [
   {

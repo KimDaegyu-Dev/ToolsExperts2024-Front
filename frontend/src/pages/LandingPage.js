@@ -3,7 +3,8 @@ import "../styles/LandingPage.css";
 import locationDot from "../assets/location_on.png"; // 위치 아이콘
 import heart from "../assets/heart.png"; // 하트 아이콘
 import Filter from "../components/Filter";
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
+import CardList from "../components/Card/CardList";
 const data1 = [
   {
     id: "best1",
@@ -108,7 +109,7 @@ function LandingPage() {
       </div>
       <hr />
       <Filter />
-      <div className="listContainer">
+      {/* <div className="listContainer">
         {data2.map((item) => (
           <Card
             key={item.id}
@@ -118,7 +119,8 @@ function LandingPage() {
             favorites={item.favorites}
           />
         ))}
-      </div>
+      </div> */}
+      <CardList data={data2} />
     </>
   );
 }

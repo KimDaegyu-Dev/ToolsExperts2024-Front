@@ -9,68 +9,70 @@ import map from "../assets/map.png";
 import target from "../assets/target.png";
 import positionred from "../assets/positionred.png";
 import filter from "../assets/filter.png";
+import Card from "../components/Card/Card";
+import CardList from "../components/Card/CardList";
 
 const exhibits = [
   {
     id: 1,
     title: "스웨덴 국립미술관 컬렉션",
     place: "마이아트뮤지엄",
-    date: "2024.06.05 ~ 2024.09.18",
+    period: "2024.06.05 ~ 2024.09.18",
   },
 
   {
     id: 2,
     title: "스웨덴 국립미술관 컬렉션",
     place: "마이아트뮤지엄",
-    date: "2024.06.05 ~ 2024.09.18",
+    period: "2024.06.05 ~ 2024.09.18",
   },
   {
     id: 3,
     title: "스웨덴 국립미술관 컬렉션",
     place: "마이아트뮤지엄",
-    date: "2024.06.05 ~ 2024.09.18",
+    period: "2024.06.05 ~ 2024.09.18",
   },
   {
     id: 4,
     title: "스웨덴 국립미술관 컬렉션",
     place: "마이아트뮤지엄",
-    date: "2024.06.05 ~ 2024.09.18",
+    period: "2024.06.05 ~ 2024.09.18",
   },
   {
     id: 5,
     title: "스웨덴 국립미술관 컬렉션",
     place: "마이아트뮤지엄",
-    date: "2024.06.05 ~ 2024.09.18",
+    period: "2024.06.05 ~ 2024.09.18",
   },
   {
     id: 6,
     title: "스웨덴 국립미술관 컬렉션",
     place: "마이아트뮤지엄",
-    date: "2024.06.05 ~ 2024.09.18",
+    period: "2024.06.05 ~ 2024.09.18",
   },
   {
     id: 7,
     title: "스웨덴 국립미술관 컬렉션",
     place: "마이아트뮤지엄",
-    date: "2024.06.05 ~ 2024.09.18",
+    period: "2024.06.05 ~ 2024.09.18",
   },
   {
     id: 8,
     title: "스웨덴 국립미술관 컬렉션",
     place: "마이아트뮤지엄",
-    date: "2024.06.05 ~ 2024.09.18",
+    period: "2024.06.05 ~ 2024.09.18",
   },
   {
     id: 9,
     title: "스웨덴 국립미술관 컬렉션",
     place: "마이아트뮤지엄",
-    date: "2024.06.05 ~ 2024.09.18",
+    period: "2024.06.05 ~ 2024.09.18",
   },
   {
     id: 10,
     title: "스웨덴 국립미술관 컬렉션",
     place: "마이아트뮤지엄",
-    date: "2024.06.05 ~ 2024.09.18",
+    period: "2024.06.05 ~ 2024.09.18",
   },
 ];
 
@@ -124,66 +126,7 @@ const MyNearPage = () => (
     </div>
 
     {/* 전시목록 배열 10개 */}
-    {exhibits.map((exhibit, i) => (
-      <div key={i}>
-        <div
-          className={`box box${i + 1}`}
-          style={{
-            top: `${745 + 255 * Math.floor(i / 2)}px`,
-            left: `${145 + 565 * (i % 2)}px`,
-          }}
-        ></div>
-        <div
-          className={`title title${i + 1}`}
-          style={{
-            top: `${755 + 255 * Math.floor(i / 2)}px`,
-            left: `${360 + 565 * (i % 2)}px`,
-          }}
-        >
-          {exhibit.title}
-        </div>
-        <i
-          className="material-icons"
-          style={{
-            position: "absolute",
-            width: "17px",
-            height: "17px",
-            top: `${780 + 255 * Math.floor(i / 2)}px`,
-            left: `${357 + 565 * (i % 2)}px`,
-            color: "black",
-          }}
-        >
-          location_on
-        </i>
-        <div
-          className={`place place${i + 1}`}
-          style={{
-            top: `${787 + 255 * Math.floor(i / 2)}px`,
-            left: `${383 + 565 * (i % 2)}px`,
-          }}
-        >
-          {exhibit.place}
-        </div>
-        <img
-          src={heartImage}
-          alt="heart"
-          className="heart"
-          style={{
-            top: `${755 + 255 * Math.floor(i / 2)}px`,
-            left: `${665 + 565 * (i % 2)}px`,
-          }}
-        />
-        <div
-          className={`date date${i + 1}`}
-          style={{
-            top: `${900 + 255 * Math.floor(i / 2)}px`,
-            left: `${540 + 565 * (i % 2)}px`,
-          }}
-        >
-          {exhibit.date}
-        </div>
-      </div>
-    ))}
+    <CardList data={exhibits} />
   </>
 );
 

@@ -6,19 +6,20 @@ import locationDot from "../assets/location_on.png"; // 위치 아이콘
 import "./Filter.css";
 export default function Filter() {
   return (
-    <>
-      <div>
-        <img className="calender-icon" src={calender} alt="달력 아이콘" />
-        <p className="calender-text">2024.07.21</p>
+    <div className="filter-container">
+      <div className="calender-location">
+        <div>
+          <img className="calender-icon" src={calender} alt="달력 아이콘" />
+          <p className="calender-text">2024.07.21</p>
+        </div>
+        <div>
+          <img className="location-icon" src={locationDot} alt="location" />
+          <p className="location-text">부산광역시 전체</p>
+          <img className="arrow-icon2" src={arrow} alt="arrow" />
+          {/* <IoIosArrowDown className="location-arrow" /> */}
+        </div>
       </div>
-      <div>
-        <img className="location-icon" src={locationDot} alt="location" />
-        <p className="location-text">부산광역시 전체</p>
-        <img className="arrow-icon2" src={arrow} alt="arrow" />
-        {/* <IoIosArrowDown className="location-arrow" /> */}
-      </div>
-      <div className="filter">필터</div>
       <img className="pageInfo" src={info} alt="page info" />
-    </>
+    </div>
   );
 }
