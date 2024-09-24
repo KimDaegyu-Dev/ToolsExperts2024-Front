@@ -1,13 +1,12 @@
 import client from "./client";
 
 export async function getExhibits({ from, to, page, rows }) {
-  const response = await client.get("/rest/publicperformancedisplays/realm", {
+  const response = await client.get("/exhibits", {
     params: {
       from,
       to,
-      cPage: page,
+      page,
       rows,
-      realmCode: "D000",
     },
   });
   return response.data;

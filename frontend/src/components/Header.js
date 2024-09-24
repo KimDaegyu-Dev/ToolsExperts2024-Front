@@ -3,12 +3,8 @@ import search from "../assets/search.png";
 import heart from "../assets/heart.png";
 import profile from "../assets/profile.png";
 import { Link } from "react-router-dom";
-import useExhibits from "../hooks/useExhibits";
 
 export default function Header() {
-  //   //   convertXmlToJson(data);
-  //   const { mutate: getExhibits } = useExhibits();
-  //   getExhibits({ from: "20240901", to: "20240901", page: "1", rows: "10" });
   return (
     <header className="header">
       <Link to="/" className="logo">

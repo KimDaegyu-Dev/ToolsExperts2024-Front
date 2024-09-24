@@ -8,6 +8,7 @@
   border-radius: 12px;
   width: 183px;
   height: 183px;
+  object-fit: contain;
 }
 .card-text-container {
   margin-left: 20px;

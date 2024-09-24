@@ -123,8 +123,8 @@ const FollowPage = () => (
     {exhibits.map((item) => (
       <Card
         key={item.id}
-        content={item.title}
-        location={item.place}
+        title={item.title}
+        place={item.place}
         period={item.date}
         favorites={item.favorites}
       />

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/LandingPage.css";
 import locationDot from "../assets/location_on.png"; // 위치 아이콘
 import heart from "../assets/heart.png"; // 하트 아이콘
 import Filter from "../components/Filter";
 import Card from "../components/Card/Card";
 import CardList from "../components/Card/CardList";
+import useExhibits from "../hooks/useExhibits";
+import { getExhibits } from "../api/exhibit";
+import { useQuery } from "react-query";
 const data1 = [
   {
     id: "best1",
@@ -90,6 +93,10 @@ function Best({ content, location, period }) {
   );
 }
 function LandingPage() {
+  // const { mutate: getExhibits, data } = useExhibits();
+  const [exhibits, setEchibits] = useState();
+  const { data } = useQuery("exhibits", getExhibits);
+  const decodedData = decodeURI(data);
   return (
     <>
       <div>
@@ -109,18 +116,28 @@ function LandingPage() {
       </div>
       <hr />
       <Filter />
-      {/* <div className="listContainer">
-        {data2.map((item) => (
-          <Card
-            key={item.id}
-            content={item.content}
-            location={item.location}
-            period={item.period}
-            favorites={item.favorites}
-          />
-        ))}
-      </div> */}
-      <CardList data={data2} />
+      {data
+        ? data.map((item, idx) => (
+            <Card
+              key={idx}
+              thumbnail={item.thumbnail}
+              title={item.title}
+              place={item.place}
+              from={item.startDate}
+              to={item.endDate}
+              favorites={item.favorites}
+            />
+          ))
+        : data2.map((item) => (
+            <Card
+              key={item.id}
+              title={item.content}
+              place={item.location}
+              period={item.period}
+              favorites={item.favorites}
+            />
+          ))}
+      {/* <CardList data={data} /> */}
     </>
   );
 }

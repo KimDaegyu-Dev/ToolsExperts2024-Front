@@ -10,7 +10,7 @@ import target from "../assets/target.png";
 import positionred from "../assets/positionred.png";
 import filter from "../assets/filter.png";
 import Card from "../components/Card/Card";
-import CardList from "../components/Card/CardList";
+// import CardList from "../components/Card/CardList";
 
 const exhibits = [
   {
@@ -123,10 +123,17 @@ const MyNearPage = () => (
       <img src={target} alt="target" className="target" />
       <img src={positionred} alt="positionred" className="positionred" />
       <img src={filter} alt="filter" className="filter" />
+      {/* 전시목록 배열 10개 */}
+      {exhibits.map((item, idx) => (
+        <Card
+          key={idx}
+          title={item.title}
+          place={item.place}
+          period={item.date}
+          favorites={item.favorites}
+        />
+      ))}
     </div>
-
-    {/* 전시목록 배열 10개 */}
-    <CardList data={exhibits} />
   </>
 );
 
