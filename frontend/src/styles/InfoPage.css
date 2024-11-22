@@ -1,5 +1,5 @@
 * {
-  font-family: 'Pretendard', Arial;
+  font-family: "Pretendard", Arial;
   color: white;
 }
 
@@ -32,7 +32,7 @@ body {
   font-size: 16px;
   font-weight: 500;
   line-height: 19.2px;
-  opacity: 0.5; 
+  opacity: 0.5;
 }
 
 .poster-container2 {
@@ -78,9 +78,8 @@ body {
 }
 
 .price-details {
-  line-height: 1.8; 
+  line-height: 1.8;
 }
-
 
 .book2 {
   display: flex;
@@ -91,7 +90,7 @@ body {
   margin-top: 40px;
   margin-right: 20px;
   margin-left: auto;
-  background-color: #FF6038;
+  background-color: #ff6038;
   color: #fff;
   line-height: 32.4px;
   font-size: 25px;
@@ -113,18 +112,18 @@ body {
   text-align: center;
   margin-top: 80px;
   margin-right: 20px;
-  border: 1px solid #8E8E8EBF; 
-  color: #8E8E8E;
-  border-radius: 26px; 
-  width: 323px; 
-  height: 52px; 
+  border: 1px solid #8e8e8ebf;
+  color: #8e8e8e;
+  border-radius: 26px;
+  width: 323px;
+  height: 52px;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
 
 .index2 .item:first-child {
-  text-align: center; 
+  text-align: center;
 }
 
 .index2 .item:nth-child(2) {
@@ -165,7 +164,7 @@ body {
 
 .divider {
   width: 1px;
-  background-color: white; 
-  height: 250px; 
+  background-color: white;
+  height: 250px;
   margin: 40px 80px 0px 10px;
 }
