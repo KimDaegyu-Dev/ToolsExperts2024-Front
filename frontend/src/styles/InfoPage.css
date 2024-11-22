@@ -24,6 +24,7 @@ body {
   font-size: 30px;
   font-weight: 600;
   line-height: 36px;
+  color: white;
 }
 
 .subtitle2 {
@@ -116,11 +117,13 @@ body {
   border: 1px solid #8E8E8EBF; 
   color: #8E8E8E;
   border-radius: 26px; 
-  width: 323px; 
   height: 52px; 
   display: flex;
   justify-content: center; 
   align-items: center; 
+  background-color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .index2 .item:first-child {

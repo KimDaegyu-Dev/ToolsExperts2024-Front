@@ -3,6 +3,7 @@ import "../styles/InfoPage.css";
 //import Header from "../components/Header.js"; 
 //import star2 from "../assets/star.png"; // 별 아이콘
 
+
 const InfoPage = () => (
   <div className="info-page">
     <div className="title2">
@@ -49,9 +50,9 @@ const InfoPage = () => (
     </div>
     <div className="book2">예매하러 가기</div>    
     <div className="index2">
-      <div className="item">위치안내</div>
-      <div className="item">관람후기</div>
-      <div className="item">전시회 주변</div> 
+      <button className="item">위치안내</button>
+      <button className="item">관람후기</button>
+      <button className="item">전시회 주변</button> 
     </div>
 
     <div className="container">

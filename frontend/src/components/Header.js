@@ -1,3 +1,4 @@
+import React from 'react';
 import "./Header.css";
 import search from "../assets/search.png";
 import heart from "../assets/heart.png";
