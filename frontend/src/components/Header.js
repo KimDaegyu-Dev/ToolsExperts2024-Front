@@ -3,24 +3,50 @@ import "../components/Header.css";
 import search from "../assets/search.png";
 import heart from "../assets/heart.png";
 import profile from "../assets/profile.png";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
   return (
     <div>
       <header className="header">
-        <div className="logo"></div>
+        <Link to="/Landing" className="logo"></Link>
         <ul>
           <li>
-            <a href="#">전시 추천</a>
+            <span
+              onClick={() => {
+                navigate("/detail");
+              }}
+            >
+              전시 추천
+            </span>
           </li>
           <li>
-            <a href="#">팔로우</a>
+            <span
+              onClick={() => {
+                navigate("/detail");
+              }}
+            >
+              팔로우
+            </span>
           </li>
           <li>
-            <a href="#">내 근처</a>
+            <span
+              onClick={() => {
+                navigate("/detail");
+              }}
+            >
+              내 근처
+            </span>
           </li>
           <li>
-            <a href="#">일정별</a>
+            <span
+              onClick={() => {
+                navigate("/schedule");
+              }}
+            >
+              일정별
+            </span>
           </li>
         </ul>
         <a href="#">

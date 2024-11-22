@@ -5,9 +5,9 @@ import locationDot2 from "../assets/location_white.png"; // 위치 아이콘
 import locationDot3 from "../assets/location_black.png"; // 위치 아이콘
 import calender from "../assets/calender.png"; // 달력 아이콘
 import heart from "../assets/heart.png"; // 하트 아이콘
-import arrow from "../assets/arrow.png"; // 화살표 아이콘
-import info from "../assets/page_info.png"; //
-import close from "../assets/close.png"; //
+import background from "../assets/background.png";
+import BackLine from "../assets/BackLine.png";
+
 const data1 = [
   {
     id: "best1",
@@ -139,6 +139,13 @@ function LandingPage() {
         <div className="container1-1">
           <small className="small">7월 4주차</small>
           <h1 className="main">지금 주목받고 있는 전시회 BEST 3</h1>
+          <img className="background" src={background} alt="배경" />
+          <img className="background" src={background} alt="배경" />
+          <img className="background" src={background} alt="배경" />
+          <img className="BackLine1" src={BackLine} alt="배경 선" />
+          <img className="BackLine2" src={BackLine} alt="배경 선" />
+          <img className="BackLine3" src={BackLine} alt="배경 선" />
+
           <div className="bestContainer">
             {data1.map((item) => (
               <Best
@@ -153,20 +160,10 @@ function LandingPage() {
         </div>
         <div className="container1-2">
           <hr />
-          {/* <div> */}
           <img className="calender-icon1" src={calender} alt="달력 아이콘" />
           <p className="calender-text1">2024.07.21</p>
-          {/* </div> */}
-          {/* <div> */}
           <img className="location-icon" src={locationDot} alt="location" />
           <p className="location-text">부산광역시 전체</p>
-          {/* <IoIosArrowDown className="location-arrow" /> */}
-          {/* </div> */}
-          {/* <div className="filterText">필터</div>
-          <div className="filter1">
-            <img className="filter-close" src={close} alt="close" />
-          </div>
-          <img className="pageInfo" src={info} alt="page info" /> */}
         </div>
         <div className="container1-3">
           <div className="listContainer">

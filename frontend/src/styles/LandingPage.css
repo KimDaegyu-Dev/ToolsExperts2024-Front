@@ -10,9 +10,6 @@
   background-color: black;
   width: 1300px;
 }
-/* .container1-2 {
-  justify-content: center;
-} */
 .container1-3 {
   display: flex;
   justify-content: center;
@@ -20,18 +17,12 @@
 }
 
 .small {
-  /* 7월 4주차 */
-
   display: flex;
   justify-content: center;
   align-items: baseline;
   margin-top: 25px;
-
-  /* position: absolute; */
   width: 70px;
   height: 15px;
-  /* left: 205px;
-  top: 110px; */
 
   font-family: "Pretendard";
   font-style: normal;
@@ -42,15 +33,11 @@
   color: white;
 }
 .main {
-  /* 지금 주목받고 있는 전시회 BEST 5 */
   display: flex;
   justify-content: center;
   align-items: center;
-  /* position: absolute; */
   width: 300px;
   height: 60px;
-  /* left: 205px;
-  top: 108px; */
 
   font-family: "Pretendard";
   font-style: normal;
@@ -60,17 +47,40 @@
 
   color: white;
 }
+.background {
+  position: relative;
+  top: -80px;
+  left: 350px;
+  width: 333px;
+  height: 396px;
+  z-index: 0;
+}
+.BackLine1 {
+  position: relative;
+  top: -350px;
+  left: -620px;
+  height: 190px;
+}
+.BackLine2 {
+  position: relative;
+  top: -350px;
+  left: -240px;
+  height: 190px;
+}
+.BackLine3 {
+  position: relative;
+  top: -350px;
+  left: 130px;
+  height: 190px;
+}
+
 .bestContainer {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* position: absolute; */
   display: flex;
   justify-content: right;
   margin-top: 40px;
   margin-bottom: 60px;
   align-items: center;
-  gap: 45px;
+  gap: 35px;
   top: 230px;
   left: 205px;
 }
@@ -78,10 +88,13 @@
   cursor: pointer;
 }
 .bestBox {
+  position: relative;
+  top: -420px;
   background: #f5f5ed;
   border-radius: 12px;
   width: 340px;
   height: 235px;
+  z-index: 2;
 }
 .best-content {
   position: relative;
@@ -93,7 +106,6 @@
   font-weight: 600;
   line-height: 21.6px;
   color: black;
-  /* text-align: left; */
   padding: 10px;
 }
 .best-heart {
@@ -135,35 +147,27 @@
   left: 1315px;
 }
 hr {
-  /* Line 1 */
   position: relative;
+  top: -420px;
   display: flex;
   width: 1300px;
   height: 0px;
-  /* left: 205px;
-  top: 500px; */
 
   border: 2px solid #dedede;
 }
 .calender-icon1 {
   display: flex;
   position: relative;
-  top: 35px;
+  top: -385px;
   left: 5px;
   width: 25px;
   height: 25px;
   color: #9f9f9f;
 }
 .calender-text1 {
-  /* 2024. 07. 21 */
-
-  /* width: 80px;
-  height: 21px; */
-  /* left: 10%;
-  top: 300px; */
   display: flex;
   position: relative;
-  top: 0px;
+  top: -420px;
   left: 50px;
   font-family: "Pretendard";
   font-style: normal;
@@ -174,10 +178,9 @@ hr {
   color: white;
 }
 .location-icon {
-  /* location_on */
   display: flex;
   position: relative;
-  top: -36px;
+  top: -456px;
   left: 180px;
   width: 22px;
   height: 26px;
@@ -187,7 +190,7 @@ hr {
   /* 부산광역시 전체 */
   display: flex;
   position: relative;
-  top: -72px;
+  top: -492px;
   left: 220px;
   width: 150px;
   height: 21px;
@@ -207,7 +210,7 @@ hr {
 .listContainer {
   display: flex;
   position: relative;
-  top: 10px;
+  top: -410px;
   flex-direction: row;
   flex-wrap: wrap;
   width: 1200px;
@@ -268,7 +271,3 @@ hr {
   top: 0px;
   left: 160px;
 }
-
-/* .bestBox.period {
-  text-align: right;
-} */
