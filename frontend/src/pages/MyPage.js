@@ -1,5 +1,5 @@
 import React from "react";
-// import "../styles/MyPage.css";
+import "../styles/MyPage.css";
 import roundHeart from "../assets/roundHeart.png";
 
 function MyPage() {
@@ -7,7 +7,6 @@ function MyPage() {
     <>
       <div className="container1">
         <p>
-          <p className="circle1"></p>
           <span className="name1">김민주님 안녕하세요!</span>
         </p>
         <a href="#" className="myInfo">

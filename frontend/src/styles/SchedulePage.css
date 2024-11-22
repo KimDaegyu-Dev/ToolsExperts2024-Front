@@ -1,12 +1,11 @@
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: white;
-} */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: flex-start;
+  /* background-color: white; */
+}
 
 .month {
   position: absolute;

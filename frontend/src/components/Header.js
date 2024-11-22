@@ -1,4 +1,5 @@
-import "../styles/Header.css";
+import React from "react";
+import "../components/Header.css";
 import search from "../assets/search.png";
 import heart from "../assets/heart.png";
 import profile from "../assets/profile.png";

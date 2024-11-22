@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react";
-// import "../styles/SchedulePage.css";
+import "../styles/SchedulePage.css";
 import arrow_back_ios from "../assets/arrow_back_ios.png";
 import Ellipse from "../assets/Ellipse.png";
 import Circle from "../assets/Circle.png";
 import Rectangle from "../assets/Rectangle.png";
 import Line from "../assets/Line.png";
 
-// const plans = [
-//   { title: "스웨덴 국립미술관 컬렉션", startDay: 9, duration: 8 },
-//   { title: "스웨덴 국립미술관 컬렉션", startDay: 11, duration: 5 },
-// ];
+const plans = [
+  { title: "스웨덴 국립미술관 컬렉션", startDay: 9, duration: 8 },
+  { title: "스웨덴 국립미술관 컬렉션", startDay: 11, duration: 5 },
+];
 
-// function Schedule() {
-//   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
-//   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
+function Schedule() {
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
 
-//   useEffect(() => {}, [currentMonth, currentYear]);
+  useEffect(() => {}, [currentMonth, currentYear]);
 
   const getDaysInMonth = (year, month) => {
     return new Date(year, month + 1, 0).getDate();
@@ -81,7 +81,7 @@ import Line from "../assets/Line.png";
     "12월",
   ];
 
-//   const calendar = generateCalendar(currentYear, currentMonth);
+  const calendar = generateCalendar(currentYear, currentMonth);
 
   return (
     <div className="container">
@@ -210,5 +210,4 @@ import Line from "../assets/Line.png";
     </div>
   );
 }
-
-// export default Schedule;
+export default Schedule;

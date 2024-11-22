@@ -1,5 +1,5 @@
 import React from "react";
-// import "../styles/DetailPage.css";
+import "../styles/DetailPage.css";
 import star from "../assets/star.png"; // 별 아이콘
 import orangeStar from "../assets/orangeStar.png"; // 평점 별 아이콘
 import arrow from "../assets/arrow.png"; // 별 아이콘
