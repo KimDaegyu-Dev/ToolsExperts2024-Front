@@ -1,4 +1,4 @@
-import "../styles/Header.css"; // 병합하려는 브랜치의 코드
+import './Header.css'; // 병합하려는 브랜치의 코드
 import search from "../assets/search.png";
 import heart from "../assets/heart.png";
 import profile from "../assets/profile.png";
