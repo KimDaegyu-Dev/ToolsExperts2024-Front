@@ -7,15 +7,13 @@ import Rectangle from "../assets/Rectangle.png";
 import Line from "../assets/Line.png";
 
 const plans = [
-  { title: "스웨덴 국립미술관 컬렉션", startDay: 9, duration: 8 },
+  { title: "스웨덴 국립미술관 컬렉션", startDay: 9, duration: 6 },
   { title: "스웨덴 국립미술관 컬렉션", startDay: 11, duration: 5 },
 ];
 
-function Schedule() {
+const SchedulePage = () => {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
-
-  useEffect(() => {}, [currentMonth, currentYear]);
 
   const getDaysInMonth = (year, month) => {
     return new Date(year, month + 1, 0).getDate();
@@ -85,21 +83,23 @@ function Schedule() {
 
   return (
     <div className="container">
-      <div className="month">
-        {currentYear} {monthNames[currentMonth]}
+      <div className="header">
+        <div className="month">
+          {currentYear} {monthNames[currentMonth]}
+        </div>
+        <img
+          className="arrow_back_ios"
+          src={arrow_back_ios}
+          alt="Previous Month"
+          onClick={handlePrevMonth}
+        />
+        <img
+          className="arrow_next_ios"
+          src={arrow_back_ios}
+          alt="Next Month"
+          onClick={handleNextMonth}
+        />
       </div>
-      <img
-        className="arrow_back_ios"
-        src={arrow_back_ios}
-        alt="Previous Month"
-        onClick={handlePrevMonth}
-      />
-      <img
-        className="arrow_next_ios"
-        src={arrow_back_ios}
-        alt="Next Month"
-        onClick={handleNextMonth}
-      />
       <table className="calendar">
         <tbody>
           {calendar.map((week, weekIndex) => (
@@ -136,14 +136,16 @@ function Schedule() {
                           if (day === plan.startDay) {
                             return (
                               <div key={index} className="first-plan">
-                                <img
-                                  className="first-Ellipse"
-                                  src={Ellipse}
-                                  alt="Ellipse"
-                                />
                                 <span className="first-title">
                                   {plan.title}
                                 </span>
+                                <div className="first-Rectangle-container">
+                                  <img
+                                    className="first-Rectangle"
+                                    src={Rectangle}
+                                    alt="Rectangle"
+                                  />
+                                </div>
                               </div>
                             );
                           } else if (
@@ -167,14 +169,16 @@ function Schedule() {
                           if (day === plan.startDay) {
                             return (
                               <div key={index} className="second-plan">
-                                <img
-                                  className="second-Circle"
-                                  src={Circle}
-                                  alt="Circle"
-                                />
                                 <span className="second-title">
                                   {plan.title}
                                 </span>
+                                <div className="second-Line-container">
+                                  <img
+                                    className="second-Line"
+                                    src={Line}
+                                    alt="Line"
+                                  />
+                                </div>
                               </div>
                             );
                           } else if (
@@ -209,5 +213,6 @@ function Schedule() {
       </table>
     </div>
   );
-}
-export default Schedule;
+};
+
+export default SchedulePage; // export 문이 추가되어야 함

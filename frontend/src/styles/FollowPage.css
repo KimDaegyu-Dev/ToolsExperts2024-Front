@@ -10,7 +10,6 @@
   left: 142px;
   font-size: 30px;
   font-weight: 700;
-
   line-height: 36px;
 }
 
@@ -54,7 +53,10 @@
 .container-horizontal,
 .name-horizontal {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .circle,
@@ -162,6 +164,9 @@
   top: 460px;
   background: #ececec;
   border-radius: 12px;
+  padding: 10px;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .box1,
@@ -185,75 +190,29 @@
   height: 47px;
   font-weight: 600;
   font-size: 18px;
-  line-height: 21.6px;
-  color: #000000;
-  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.title1,
-.title2,
-.title3,
-.title4,
-.title5,
-.title6,
-.title7,
-.title8,
-.title9,
-.title10 {
-  width: 300px;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 16.8px;
-  color: #000000;
+.follow-heart {
+  width: 20px;
+  height: 20px;
 }
 
-.place1,
-.place2,
-.place3,
-.place4,
-.place5,
-.place6,
-.place7,
-.place8,
-.place9,
-.place10 {
-  width: 100px;
-  height: 16px;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 13.2px;
-  color: #000000;
+.follow-locationIcon {
+  width: 20px;
+  height: 20px;
 }
 
-.heart1,
-.heart2,
-.heart3,
-.heart4,
-.heart5,
-.heart6,
-.heart7,
-.heart8,
-.heart9,
-.heart10 {
-  position: absolute;
-  top: 745px;
-  left: 300px;
+.follow-location {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #888;
 }
 
-.date1,
-.date2,
-.date3,
-.date4,
-.date5,
-.date6,
-.date7,
-.date8,
-.date9,
-.date10 {
-  width: 139px;
-  height: 21px;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 14px;
-  color: #000000;
+.follow-period {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #888;
 }

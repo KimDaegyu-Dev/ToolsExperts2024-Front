@@ -82,47 +82,47 @@ const MyNearPage = () => (
     <div>
       <img
         src={calendar}
-        alt="calendar"
-        className="calendar"
+        alt="calendar2"
+        className="calendar2"
         style={{ top: "90px", left: "145px" }}
       />
-      <div className="datef" style={{ top: "100px", left: "190px" }}>
+      <div className="datef2" style={{ top: "100px", left: "190px" }}>
         2024. 07. 21
       </div>
       <img
         src={position}
-        alt="position"
+        alt="position2"
         className="position"
         style={{ top: "90px", left: "330px" }}
       />
-      <div className="placef" style={{ top: "100px", left: "370px" }}>
+      <div className="placef2" style={{ top: "100px", left: "370px" }}>
         부산광역시 전체
       </div>
       <img
         src={arrowDown}
-        alt="arrowDown"
-        className="arrowDown"
+        alt="arrowDown2"
+        className="arrowDown2"
         style={{ top: "100px", left: "505px" }}
       />
-      <div className="filter-text" style={{ top: "150px", left: "145px" }}>
+      <div className="filter-text2" style={{ top: "150px", left: "145px" }}>
         필터
       </div>
-      <div className="container-horizontal">
+      <div className="container-horizontal2">
         {[...Array(5)].map((_, i) => (
           <div key={i} className={`circle circle${i + 1}`}></div>
         ))}
       </div>
 
-      <div className="close-horizontal">
+      <div className="close-horizontal2">
         {[...Array(5)].map((_, i) => (
           <img key={i} src={close} className={`close close${i + 1}`} />
         ))}
       </div>
 
-      <img src={map} alt="map" className="map" />
-      <img src={target} alt="target" className="target" />
-      <img src={positionred} alt="positionred" className="positionred" />
-      <img src={filter} alt="filter" className="filter" />
+      <img src={map} alt="map" className="map2" />
+      <img src={target} alt="target" className="target2" />
+      <img src={positionred} alt="positionred" className="positionred2" />
+      <img src={filter} alt="filter" className="filter2" />
       {/* 전시목록 배열 10개 */}
       {exhibits.map((item, idx) => (
         <Card

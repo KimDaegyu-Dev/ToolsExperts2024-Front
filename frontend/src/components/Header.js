@@ -3,11 +3,12 @@ import "../components/Header.css";
 import search from "../assets/search.png";
 import heart from "../assets/heart.png";
 import profile from "../assets/profile.png";
+
 export default function Header() {
   return (
     <div>
       <header className="header">
-        <div className="logo" s></div>
+        <div className="logo"></div>
         <ul>
           <li>
             <a href="#">전시 추천</a>

@@ -8,18 +8,21 @@
 } */
 
 .login-container {
-  background-color: #ececec;
+  background-color: #000000; /* 컨테이너 배경을 검정색으로 변경 */
   padding: 60px;
   border-radius: 10px;
   text-align: center;
   width: 380px;
-  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
   margin-bottom: 50px;
   font-size: 60px;
-  color: #000000;
+  color: #ffffff; /* 흰색 텍스트로 변경 */
   font-weight: bold;
 }
 
@@ -34,27 +37,27 @@ input[type="password"] {
   width: 100%;
   padding: 15px;
   margin-bottom: 25px;
-  background-color: #ececec;
-  border: 1px solid #929292;
+  background-color: #1a1a1a; /* 입력창 배경을 어두운 회색으로 변경 */
+  border: 1px solid #ffffff; /* 입력창 테두리를 강조 */
   border-radius: 25px;
   font-size: 18px;
-  color: #8c8c8c;
+  color: #ffffff; /* 텍스트를 흰색으로 설정 */
 }
 
 button {
   width: 100%;
   padding: 15px;
-  background-color: #4e80ff;
+  background-color: #ff6f00; /* 버튼 배경색을 주황색으로 변경 */
   border: none;
   border-radius: 25px;
-  color: #dadada;
+  color: #ffffff; /* 버튼 텍스트 색상을 흰색으로 설정 */
   font-size: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #434190;
+  background-color: #e65c00; /* 버튼 hover 시 조금 더 어두운 주황색으로 변경 */
 }
 
 .options {
@@ -62,11 +65,11 @@ button:hover {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  color: #535353;
+  color: #ffffff; /* 링크 텍스트를 흰색으로 변경 */
 }
 
 .options a {
-  color: #535353;
+  color: #ffffff; /* 링크 색상을 주황색으로 설정 */
   text-decoration: none;
 }
 
