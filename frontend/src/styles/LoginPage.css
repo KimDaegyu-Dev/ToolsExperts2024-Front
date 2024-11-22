@@ -1,20 +1,24 @@
-/* body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ECECEC;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-} */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ECECEC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
 .login-container {
-  background-color: #ececec;
+  background-color: #ECECEC;
   padding: 60px;
   border-radius: 10px;
   text-align: center;
   width: 380px;
-  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -30,25 +34,24 @@ form {
   align-items: center;
 }
 
-input[type="id"],
-input[type="password"] {
+input[type="id"], input[type="password"] {
   width: 100%;
   padding: 15px;
   margin-bottom: 25px;
-  background-color: #ececec;
+  background-color: #ECECEC;
   border: 1px solid #929292;
   border-radius: 25px;
   font-size: 18px;
-  color: #8c8c8c;
+  color: #8C8C8C;
 }
 
 button {
   width: 100%;
   padding: 15px;
-  background-color: #4e80ff;
+  background-color: #4E80FF;
   border: none;
   border-radius: 25px;
-  color: #dadada;
+  color: #DADADA;
   font-size: 20px;
   cursor: pointer;
   transition: background-color 0.3s;

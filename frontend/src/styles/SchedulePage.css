@@ -1,41 +1,43 @@
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: white;
-} */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
 .month {
-  position: absolute;
-  width: 225px;
-  height: 60px;
-  top: 95px;
-  left: 144px;
   font-family: Pretendard, sans-serif;
   font-size: 30px;
   font-weight: 700;
+  margin-right: 10px;
 }
 
 .arrow_back_ios {
-  position: absolute;
+  position: flex;
   width: 12px;
   height: 21px;
   top: 108px;
   left: 290px;
-  color: #4a4a4a;
+  color: #4A4A4A;
   transform: scaleX(-1);
 }
 
 .arrow_next_ios {
-  position: absolute;
+  position: flex;
   width: 12px;
   height: 21px;
   top: 108px;
-  left: 320px;
-  color: #4a4a4a;
+  left: 350px;
+  color: #4A4A4A;
 }
 
 .container {
@@ -55,13 +57,14 @@
 .calendar td {
   width: 165px;
   height: 100px;
-  border: 1px solid #e0e0e0;
-  position: relative;
+  border: 1px solid #E0E0E0;
+  position: flex;
   vertical-align: top;
+  padding: 0;
 }
 
 .today {
-  position: relative;
+  position: flex;
   text-align: right;
   padding: 5px;
   font-size: 16px;
@@ -82,7 +85,7 @@
   right: 1px;
   width: 20px;
   height: 20px;
-  background-color: #4e80ff;
+  background-color: #4E80FF;
   border-radius: 50%;
   z-index: 1;
 }
@@ -93,78 +96,75 @@
 }
 
 .day {
-  position: relative;
+  position: flex;
   text-align: right;
   padding: 5px;
   font-size: 16px;
 }
 
 .first-plan {
-  position: relative;
-  margin-top: 10px;
+  position: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding-left: 10px;
 }
 
-.first-Ellipse {
-  width: 5px;
-  height: 5px;
-  background-color: #4e80ff;
-  border-radius: 50%;
-  display: inline-block;
-  vertical-align: middle;
-}
 
 .first-title {
+  position: absolute;
+  z-index: 2;
   font-family: Pretendard;
   font-size: 10px;
   font-weight: 500;
   line-height: 12px;
   text-align: left;
-  color: #898989;
+  color: white;
 }
 
 .first-Rectangle-container {
-  position: relative;
-  margin-top: 10px;
+  width: 100%;
+  margin-left: 0;
+  z-index: 1;
 }
 
 .first-Rectangle {
-  width: 113%;
-  height: 3px;
-  background-color: #4e80ff;
+  width: 110%;
+  height: 16px;
+  background-color: #4E80FF;
+  z-index: 1;
+  border-radius: 4px;
 }
 
 .second-plan {
-  position: relative;
-  margin-top: 10px;
+  position: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding-left: 10px;
 }
 
-.second-Circle {
-  width: 5px;
-  height: 5px;
-  background-color: #c6d6ff;
-  border-radius: 50%;
-  display: inline-block;
-  vertical-align: middle;
-}
-
 .second-title {
+  position: absolute;
+  z-index: 2;
   font-family: Pretendard;
   font-size: 10px;
   font-weight: 500;
   line-height: 12px;
   text-align: left;
-  color: #898989;
+  color: white;
 }
 
 .second-Line-container {
-  position: relative;
-  margin-top: 10px;
+  width: 100%;
+  margin-left: 0;
+  z-index: 1;
 }
 
 .second-Line {
-  width: 113%;
-  height: 3px;
-  background-color: #c6d6ff;
+  width: 110%;
+  height: 16px;
+  background-color: #C6D6FF;
+  z-index: 1;
+  border-radius: 4px;
 }
