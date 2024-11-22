@@ -5,7 +5,7 @@ function LoginPage() {
   return (
     <>
       <div className="login-container">
-        <h1>MSJWI</h1>
+        <h1>Gallerist</h1>
         <form>
           <input type="id" placeholder="이메일 주소 또는 아이디" required />
           <input type="password" placeholder="비밀번호" required />

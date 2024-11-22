@@ -1,78 +1,79 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #ECECEC;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-} 
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000000; /* 배경색을 검정색으로 변경 */
+  /* display: flex; */
+  /* flex-direction: column; */
+  align-items: center;
+  height: 100vh;
+  color: #FFFFFF; /* 기본 텍스트 색상을 흰색으로 설정 */
+}
 
 .login-container {
-  background-color: #ECECEC;
-  padding: 60px;
-  border-radius: 10px;
-  text-align: center;
-  width: 380px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+background-color: #000000; /* 컨테이너 배경을 검정색으로 변경 */
+padding: 60px;
+border-radius: 10px;
+text-align: center;
+width: 380px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 }
 
 h1 {
-  margin-bottom: 50px;
-  font-size: 60px;
-  color: #000000;
-  font-weight: bold;
+margin-bottom: 50px;
+font-size: 60px;
+color: #FFFFFF; /* 흰색 텍스트로 변경 */
+font-weight: bold;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 input[type="id"], input[type="password"] {
-  width: 100%;
-  padding: 15px;
-  margin-bottom: 25px;
-  background-color: #ECECEC;
-  border: 1px solid #929292;
-  border-radius: 25px;
-  font-size: 18px;
-  color: #8C8C8C;
+width: 100%;
+padding: 15px;
+margin-bottom: 25px;
+background-color: #1A1A1A; /* 입력창 배경을 어두운 회색으로 변경 */
+border: 1px solid #FFFFFF; /* 입력창 테두리를 강조 */
+border-radius: 25px;
+font-size: 18px;
+color: #FFFFFF; /* 텍스트를 흰색으로 설정 */
 }
 
 button {
-  width: 100%;
-  padding: 15px;
-  background-color: #4E80FF;
-  border: none;
-  border-radius: 25px;
-  color: #DADADA;
-  font-size: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+width: 100%;
+padding: 15px;
+background-color: #FF6F00; /* 버튼 배경색을 주황색으로 변경 */
+border: none;
+border-radius: 25px;
+color: #FFFFFF; /* 버튼 텍스트 색상을 흰색으로 설정 */
+font-size: 20px;
+cursor: pointer;
+transition: background-color 0.3s;
 }
 
 button:hover {
-  background-color: #434190;
+background-color: #E65C00; /* 버튼 hover 시 조금 더 어두운 주황색으로 변경 */
 }
 
 .options {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  font-size: 14px;
-  color: #535353;
+margin-top: 30px;
+display: flex;
+justify-content: space-between;
+font-size: 14px;
+color: #FFFFFF; /* 링크 텍스트를 흰색으로 변경 */
 }
 
 .options a {
-  color: #535353;
-  text-decoration: none;
+color: #FFFFFF; /* 링크 색상을 주황색으로 설정 */
+text-decoration: none;
 }
 
 .options a:hover {
-  text-decoration: underline;
+text-decoration: underline;
 }
