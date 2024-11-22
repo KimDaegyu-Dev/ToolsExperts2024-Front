@@ -11,11 +11,11 @@ const plans = [
   { title: "스웨덴 국립미술관 컬렉션", startDay: 11, duration: 5 },
 ];
 
-function Schedule() {
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
-  const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
+// function Schedule() {
+//   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+//   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
 
-  useEffect(() => {}, [currentMonth, currentYear]);
+//   useEffect(() => {}, [currentMonth, currentYear]);
 
   const getDaysInMonth = (year, month) => {
       return new Date(year, month + 1, 0).getDate();
@@ -71,7 +71,7 @@ function Schedule() {
       "7월", "8월", "9월", "10월", "11월", "12월"
   ];
 
-  const calendar = generateCalendar(currentYear, currentMonth);
+//   const calendar = generateCalendar(currentYear, currentMonth);
 
   return (
       <div className="container">
@@ -207,4 +207,4 @@ function Schedule() {
   );
 }
 
-export default Schedule;
+// export default Schedule;
