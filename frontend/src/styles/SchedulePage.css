@@ -1,51 +1,59 @@
-body {
+.agenda {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  /* display: flex; */
+  display: flex;
   justify-content: center;
   align-items: flex-start;
-  background-color: #000000;
+  background-color: black;
+  min-height: 100vh;
+}
+
+.year {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.arrow_back_ios {
+  position: absolute; 
+  left: 160px; 
+  top: 20px; 
+  transform: translateY(-50%) scaleX(-1); 
+  cursor: pointer; 
+}
+
+.arrow_next_ios {
+  position: absolute; 
+  left: 180px; 
+  top: 10px; 
+  transform: translateY(-50%); 
+  cursor: pointer; 
 }
 
 .month {
   font-family: Pretendard, sans-serif;
   font-size: 30px;
   font-weight: 700;
-  margin-right: 10px;
+  color: white;
 }
 
-.arrow_back_ios {
-  position: flex;
-  width: 12px;
-  height: 21px;
-  top: 108px;
-  left: 290px;
-  color: #4a4a4a;
-  transform: scaleX(-1);
-}
-
-.arrow_next_ios {
-  position: flex;
-  width: 12px;
-  height: 21px;
-  top: 108px;
-  left: 350px;
-  color: #4a4a4a;
-}
 
 .container {
   width: 100%;
   max-width: 1500px;
   padding: 10px;
-  background-color: white;
-  margin-top: 50px;
+  background-color: black;
+  margin-top: 100px;
 }
 
 .calendar {
   width: 100%;
   border-collapse: collapse;
   margin-top: 100px;
+  color: white;
 }
 
 .calendar td {
@@ -79,7 +87,6 @@ body {
   right: 1px;
   width: 20px;
   height: 20px;
-  background-color: #4e80ff;
   border-radius: 50%;
   z-index: 1;
 }
@@ -124,7 +131,6 @@ body {
 .first-Rectangle {
   width: 110%;
   height: 16px;
-  background-color: #4e80ff;
   z-index: 1;
   border-radius: 4px;
 }
@@ -157,7 +163,6 @@ body {
 .second-Line {
   width: 110%;
   height: 16px;
-  background-color: #c6d6ff;
   z-index: 1;
   border-radius: 4px;
 }
