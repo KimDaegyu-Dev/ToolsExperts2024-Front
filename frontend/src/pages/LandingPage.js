@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../styles/LandingPage.css";
 import locationDot from "../assets/location_on.png"; // 위치 아이콘
 import locationDot2 from "../assets/location_white.png"; // 위치 아이콘
@@ -133,10 +133,6 @@ function List({ content, location, period, url }) {
 }
 
 function LandingPage() {
-  // const { mutate: getExhibits, data } = useExhibits();
-  const [exhibits, setEchibits] = useState();
-  const { data } = useQuery("exhibits", getExhibits);
-  const decodedData = decodeURI(data);
   return (
     <>
       <div className="container11">

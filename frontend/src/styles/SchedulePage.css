@@ -58,7 +58,7 @@
 .calendar td {
   width: 165px;
   height: 100px;
-  border: 1px solid #E0E0E0;
+  border: 1px solid #e0e0e0;
   position: flex;
   vertical-align: top;
   padding: 0;
@@ -109,7 +109,6 @@
   align-items: flex-start;
   padding-left: 10px;
 }
-
 
 .first-title {
   position: absolute;

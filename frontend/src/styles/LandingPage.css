@@ -92,6 +92,7 @@
   font-size: 19px;
   font-weight: 600;
   line-height: 21.6px;
+  color: black;
   /* text-align: left; */
   padding: 10px;
 }
@@ -115,6 +116,7 @@
   font-weight: 400;
   line-height: 1px;
   text-align: left;
+  color: black;
 }
 .best-period {
   position: relative;
@@ -125,6 +127,7 @@
   font-weight: 500;
   line-height: 1px;
   text-align: left;
+  color: black;
 }
 .arrow-icon1 {
   position: absolute;
@@ -198,45 +201,6 @@ hr {
   color: white;
 }
 
-/* .filterText {
-  display: flex;
-  position: relative;
-  top: -40px;
-  width: 80px;
-  height: 21px;
-
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
-
-  color: #727272;
-}
-.filter1 {
-  position: relative;
-  width: 122px;
-  height: 26px;
-  top: 566px;
-  left: 300px;
-  gap: 0px;
-  border-radius: 13px;
-  opacity: 0px;
-  background: #4e80ff;
-  display: flex;
-}
-.filter-close {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 3px;
-  left: 95px;
-}
-.pageInfo {
-  position: absolute;
-  top: 538px;
-  left: 1290px;
-} */
 .list-link {
   cursor: pointer;
 }
@@ -251,8 +215,8 @@ hr {
   row-gap: 45px;
 }
 .listItem {
-  display: flex; /* 수평 정렬을 위한 Flexbox */
-  align-items: center; /* 수직 가운데 정렬 */
+  display: flex;
+  align-items: center;
 }
 .listBox {
   background: #f5f5ed;
@@ -280,6 +244,7 @@ hr {
   top: 8px;
   left: 315px;
   width: 20px;
+  height: 20px;
 }
 .list-locationIcon2 {
   position: relative;

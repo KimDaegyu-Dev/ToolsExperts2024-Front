@@ -7,7 +7,7 @@ import LearnPage from "../pages/LearnPage";
 import MyNearPage from "../pages/MyNearPage";
 import MyPage from "../pages/MyPage";
 import QnAPage from "../pages/QnAPage";
-import SchedulePage from "../pages/ScedulePage";
+import SchedulePage from "../pages/SchedulePage";
 import LoginPage from "../pages/LoginPage";
 export const Router = () => {
   return (
