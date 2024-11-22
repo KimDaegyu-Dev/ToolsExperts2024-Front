@@ -1,56 +1,92 @@
-small {
+.container11 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  background-color: black;
+}
+.container1-1 {
+  background-color: black;
+  width: 1300px;
+}
+/* .container1-2 {
+  justify-content: center;
+} */
+.container1-3 {
+  display: flex;
+  justify-content: center;
+  margin-top: -40px;
+}
+
+.small {
   /* 7월 4주차 */
 
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-top: 25px;
+
+  /* position: absolute; */
   width: 70px;
   height: 15px;
-  left: 222px;
-  top: 110px;
+  /* left: 205px;
+  top: 110px; */
 
   font-family: "Pretendard";
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 12px;
 
-  color: #000000;
+  color: white;
 }
-h1 {
+.main {
   /* 지금 주목받고 있는 전시회 BEST 5 */
-
-  position: absolute;
-  width: 320px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+  width: 300px;
   height: 60px;
-  left: 220px;
-  top: 108px;
+  /* left: 205px;
+  top: 108px; */
 
   font-family: "Pretendard";
   font-style: normal;
   font-weight: 700;
-  font-size: 27px;
+  font-size: 33px;
   line-height: 36px;
 
-  color: #000000;
+  color: white;
 }
 .bestContainer {
-  position: absolute;
-  display: flex; /* Flexbox 사용 */
-  justify-content: space-between; /* 아이템 간격 균등 */
-  align-items: center; /* 수직 가운데 정렬 */
-  gap: 38px; /* 아이템 간격 */
-  top: 255px;
-  left: 15%;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  /* position: absolute; */
+  display: flex;
+  justify-content: right;
+  margin-top: 40px;
+  margin-bottom: 60px;
+  align-items: center;
+  gap: 45px;
+  top: 230px;
+  left: 205px;
+}
+.best-link {
+  cursor: pointer;
 }
 .bestBox {
-  background: #ececec;
+  background: #f5f5ed;
   border-radius: 12px;
-  width: 330px;
-  height: 225px;
+  width: 340px;
+  height: 235px;
 }
 .best-content {
   position: relative;
-  top: -10px;
-  left: 5px;
+  top: 10px;
+  left: 10px;
   width: 200px;
   font-family: Pretendard;
   font-size: 19px;
@@ -61,18 +97,19 @@ h1 {
 }
 .best-heart {
   position: absolute;
-  top: 6px;
+  top: 7px;
   left: 287px;
 }
 .best-locationIcon {
   position: relative;
-  top: -35px;
-  left: 14px;
+  top: -10px;
+  left: 19px;
+  width: 17px;
 }
 .best-location {
   position: relative;
-  top: -60px;
-  left: 35px;
+  top: -37px;
+  left: 40px;
   font-family: Pretendard;
   font-size: 13px;
   font-weight: 400;
@@ -81,7 +118,7 @@ h1 {
 }
 .best-period {
   position: relative;
-  top: 75px;
+  top: 95px;
   left: 165px;
   font-family: Pretendard;
   font-size: 13.5px;
@@ -96,34 +133,175 @@ h1 {
 }
 hr {
   /* Line 1 */
-
-  position: absolute;
-  width: 1120px;
+  position: relative;
+  display: flex;
+  width: 1300px;
   height: 0px;
-  left: 206px;
-  top: 500px;
+  /* left: 205px;
+  top: 500px; */
 
   border: 2px solid #dedede;
 }
-.close {
+.calender-icon1 {
+  display: flex;
+  position: relative;
+  top: 35px;
+  left: 5px;
+  width: 25px;
+  height: 25px;
+  color: #9f9f9f;
+}
+.calender-text1 {
+  /* 2024. 07. 21 */
+
+  /* width: 80px;
+  height: 21px; */
+  /* left: 10%;
+  top: 300px; */
+  display: flex;
+  position: relative;
+  top: 0px;
+  left: 50px;
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 17px;
+
+  color: white;
+}
+.location-icon {
+  /* location_on */
+  display: flex;
+  position: relative;
+  top: -36px;
+  left: 180px;
+  width: 22px;
+  height: 26px;
+  gap: 0px;
+}
+.location-text {
+  /* 부산광역시 전체 */
+  display: flex;
+  position: relative;
+  top: -72px;
+  left: 220px;
+  width: 150px;
+  height: 21px;
+
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: white;
+}
+
+/* .filterText {
+  display: flex;
+  position: relative;
+  top: -40px;
+  width: 80px;
+  height: 21px;
+
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #727272;
+}
+.filter1 {
+  position: relative;
+  width: 122px;
+  height: 26px;
+  top: 566px;
+  left: 300px;
+  gap: 0px;
+  border-radius: 13px;
+  opacity: 0px;
+  background: #4e80ff;
+  display: flex;
+}
+.filter-close {
   position: absolute;
-  width: 18px;
-  height: 18px;
-  top: 4px;
-  left: 98px;
+  width: 20px;
+  height: 20px;
+  top: 3px;
+  left: 95px;
+}
+.pageInfo {
+  position: absolute;
+  top: 538px;
+  left: 1290px;
+} */
+.list-link {
+  cursor: pointer;
 }
 .listContainer {
-  position: absolute;
   display: flex;
+  position: relative;
+  top: 10px;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 996px;
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  column-gap: 200px;
+  width: 1200px;
+  column-gap: 270px;
   row-gap: 45px;
-  top: 630px;
-  left: 208px;
+}
+.listItem {
+  display: flex; /* 수평 정렬을 위한 Flexbox */
+  align-items: center; /* 수직 가운데 정렬 */
+}
+.listBox {
+  background: #f5f5ed;
+  border-radius: 12px;
+  width: 190px;
+  height: 190px;
+}
+.listText {
+  margin-left: 20px;
+  color: white;
+}
+.list-content {
+  position: relative;
+  top: -15px;
+  left: 0px;
+  font-family: Pretendard;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 21.6px;
+  text-align: left;
+  padding: 10px;
+}
+.list-heart {
+  position: absolute;
+  top: 8px;
+  left: 315px;
+  width: 20px;
+}
+.list-locationIcon2 {
+  position: relative;
+  top: -35px;
+  left: 10px;
+  width: 20px;
+}
+.list-location {
+  position: relative;
+  top: -78px;
+  left: 20px;
+  font-family: Pretendard;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 13.2px;
+  text-align: left;
+  padding: 10px;
+}
+.list-period {
+  position: relative;
+  top: 0px;
+  left: 160px;
 }
 
 /* .bestBox.period {

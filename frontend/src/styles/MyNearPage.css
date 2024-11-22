@@ -1,23 +1,43 @@
-
 * {
-  font-family: 'Pretendard', Arial;
+  font-family: "Pretendard", Arial;
 }
 
-
-.title, .place, .heart, .date, .box{
+.title,
+.place,
+.heart,
+.date,
+.box {
   position: absolute;
 }
 
-
-.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10 {
+/* 작은 사이즈로 통일된 박스들 */
+.box1,
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.box9,
+.box10 {
   width: 183px;
   height: 183px;
-  background: #ECECEC;
+  background: #ececec;
   border-radius: 12px;
 }
 
-
-.title1, .title2, .title3, .title4, .title5, .title6, .title7, .title8, .title9, .title10 {
+/* 나머지 박스들의 제목 */
+.title1,
+.title2,
+.title3,
+.title4,
+.title5,
+.title6,
+.title7,
+.title8,
+.title9,
+.title10 {
   width: 300px;
   font-weight: 600;
   font-size: 18px;
@@ -25,8 +45,17 @@
   color: #000000;
 }
 
-
-.place1, .place2, .place3, .place4, .place5, .place6, .place7, .place8, .place9, .place10 {
+/* 장소 스타일 */
+.place1,
+.place2,
+.place3,
+.place4,
+.place5,
+.place6,
+.place7,
+.place8,
+.place9,
+.place10 {
   width: 100px;
   height: 16px;
   font-weight: 400;
@@ -35,15 +64,33 @@
   color: #000000;
 }
 
-
-.heart1, .heart2, .heart3, .heart4, .heart5, .heart6, .heart7, .heart8, .heart9, .heart10 {
+/* 하트 이모티콘 위치 */
+.heart1,
+.heart2,
+.heart3,
+.heart4,
+.heart5,
+.heart6,
+.heart7,
+.heart8,
+.heart9,
+.heart10 {
   position: absolute;
   top: 745px; 
   left: 300px; 
 }
 
-
-.date1, .date2, .date3, .date4, .date5, .date6, .date7, .date8, .date9, .date10 {
+/* 날짜 스타일 */
+.date1,
+.date2,
+.date3,
+.date4,
+.date5,
+.date6,
+.date7,
+.date8,
+.date9,
+.date10 {
   width: 139px;
   height: 21px;
   font-weight: 400;
@@ -106,16 +153,27 @@
   height: 26px;
   top: 140px;
   border-radius: 13px;
-  background-color: #4E80FF;
+  background-color: #4e80ff;
 }
 
-.circle1 { left: 210px; }
-.circle2 { left: 360px; }
-.circle3 { left: 520px; }
-.circle4 { left: 670px; }
-.circle5 { left: 820px; }
+.circle1 {
+  left: 210px;
+}
+.circle2 {
+  left: 360px;
+}
+.circle3 {
+  left: 520px;
+}
+.circle4 {
+  left: 670px;
+}
+.circle5 {
+  left: 820px;
+}
 
-.container-horizontal2, .close-horizontal2 {
+.container-horizontal,
+.close-horizontal {
   display: flex;
   justify-content: center;
 }
@@ -127,11 +185,21 @@
   top: 142px;
 }
 
-.close1 { left: 305px; }
-.close2 { left: 455px; }
-.close3 { left: 610px; }
-.close4 { left: 760px; }
-.close5 { left: 910px; }
+.close1 {
+  left: 305px;
+}
+.close2 {
+  left: 455px;
+}
+.close3 {
+  left: 610px;
+}
+.close4 {
+  left: 760px;
+}
+.close5 {
+  left: 910px;
+}
 
 .map2 {
   position: absolute;
@@ -163,4 +231,4 @@
   height: 33px;
   top: 437px;
   left: 825px;
-}  
+}

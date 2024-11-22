@@ -1,68 +1,77 @@
 .header {
-  position: fixed;
-  width: 100vw;
-  background-color: white;
   display: flex;
-  justify-content: space-evenly;
+  position: fixed;
+  width: 100%;
+  background-color: black;
+  justify-content: center;
   align-items: center;
   /* top: 0; */
   /* left: 0; */
   height: 60px;
   z-index: 1000;
+  padding: 0 20px;
 }
 
 .logo {
-  /* position: absolute; */
+  position: relative;
+  left: -95px;
   width: 37px;
   height: 37px;
-  background-color: #4e80ff;
+  background-color: #ff6038;
   border-radius: 50%;
-  /* left: 40px; */
 }
+
+.header ul {
+  display: flex;
+  position: relative;
+  left: -25px;
+  justify-content: left;
+  list-style: none;
+  padding: 0;
+  margin-right: 20px;
+}
+
+.header ul li {
+  padding: 0 18px;
+}
+
 .header ul li a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 13px;
 }
-ul {
-  /* position: absolute; */
-  display: flex;
-  justify-content: space-between;
-  /* padding: 580px; */
-  /* width: 400px; */
-}
-li {
-  list-style: none;
-  padding: 20px;
-}
-.user-bar {
-  display: flex;
-  flex-direction: row;
-  /* justify-content: space-between; */
-}
+
 .search {
-  /* position: relative; */
-  width: 540px;
-  height: 26px;
-  /* top: 100px;
-  left: 50px; */
-  gap: 0px;
-  border-radius: 13px;
-  background: #ececec;
+  position: relative;
+  left: 50px;
+  width: 550px;
+  height: 30px;
+  border-radius: 17px;
+  background: #ff6038;
 }
-/* .search-icon {
-  position: absolute;
-  top: 20px;
-  left: 1400px;
+
+.header-icons {
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+.search-icon {
+  position: relative;
+  top: 3px;
+  left: -488px;
+  height: 20px;
+  z-index: 1;
 }
 .heart-icon {
-  position: absolute;
-  top: 20px;
-  left: 1450px;
+  position: relative;
+  top: 4px;
+  left: 50px;
+  width: 17px;
 }
 .profile-icon {
-  position: absolute;
-  top: 20px;
-  left: 1500px;
-} */
+  position: relative;
+  top: 3px;
+  left: 68px;
+  width: 15px;
+}
