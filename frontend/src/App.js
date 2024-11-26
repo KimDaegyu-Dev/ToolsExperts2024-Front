@@ -1,13 +1,16 @@
 import { BrowserRouter } from "react-router-dom";
 import Header from "./components/Header";
 import { Router } from "./routes/Router";
-
+import { QueryClient, QueryClientProvider } from "react-query";
+const queryClient = new QueryClient();
 const App = () => (
   <>
-    <BrowserRouter>
-      <Header />
-      <Router />
-    </BrowserRouter>
+    <QueryClientProvider client={queryClient}>
+      <BrowserRouter>
+        <Header />
+        <Router />
+      </BrowserRouter>
+    </QueryClientProvider>
   </>
 );
 
