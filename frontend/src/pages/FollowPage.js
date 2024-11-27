@@ -28,7 +28,7 @@ function FollowCard({ title, location, period }) {
 }
 
 function FollowPage() {
-  const { data } = useQuery("followedExhibits", getExhibits);
+  // const { data } = useQuery("followedExhibits", getExhibits);
 
   return (
     <>
@@ -38,7 +38,7 @@ function FollowPage() {
 
       {/* Follow Card Section */}
       <div className="followContainer">
-        {data
+        {/* {data
           ? data.map((item, idx) => (
               <FollowCard
                 key={idx}
@@ -54,7 +54,14 @@ function FollowPage() {
                 location={item.location}
                 period={item.period}
               />
-            ))}
+            ))} */}
+            {followedData.map((item) => (
+              <FollowCard
+                key={item.id}
+                title={item.title}
+                location={item.location}
+                period={item.period}
+              />))}
       </div>
     </>
   );

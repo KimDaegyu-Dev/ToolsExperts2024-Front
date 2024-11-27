@@ -1,9 +1,7 @@
 import React from "react";
 import "../styles/InfoPage.css";
 import Content from "../components/Content.js";
-//import Header from "../components/Header.js"; 
 //import star2 from "../assets/star.png"; // 별 아이콘
-
 
 function InfoPage() {
   return (
@@ -26,8 +24,6 @@ function InfoPage() {
             <p>취소기간 : 2024년 5월 17일 19:00 까지 (* 이후 교환/환불 및 사용불가)</p>
           </div>
         </div>
-
-      
     </>
   );
 }

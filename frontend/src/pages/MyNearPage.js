@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/MyNearPage.css";
+import Lists from "../components/Lists.js";
 import heartImage from "../assets/prime_heart.png";
 import calendar from "../assets/calendar.png";
 import position from "../assets/position.png";
@@ -9,75 +10,16 @@ import map from "../assets/map.png";
 import target from "../assets/target.png";
 import positionred from "../assets/positionred.png";
 import filter from "../assets/filter.png";
-import Card from "../components/Card/Card";
+//import Card from "../components/Card/Card";
 // import CardList from "../components/Card/CardList";
 
-const exhibits = [
-  {
-    id: 1,
-    title: "스웨덴 국립미술관 컬렉션",
-    place: "마이아트뮤지엄",
-    period: "2024.06.05 ~ 2024.09.18",
-  },
-
-  {
-    id: 2,
-    title: "스웨덴 국립미술관 컬렉션",
-    place: "마이아트뮤지엄",
-    period: "2024.06.05 ~ 2024.09.18",
-  },
-  {
-    id: 3,
-    title: "스웨덴 국립미술관 컬렉션",
-    place: "마이아트뮤지엄",
-    period: "2024.06.05 ~ 2024.09.18",
-  },
-  {
-    id: 4,
-    title: "스웨덴 국립미술관 컬렉션",
-    place: "마이아트뮤지엄",
-    period: "2024.06.05 ~ 2024.09.18",
-  },
-  {
-    id: 5,
-    title: "스웨덴 국립미술관 컬렉션",
-    place: "마이아트뮤지엄",
-    period: "2024.06.05 ~ 2024.09.18",
-  },
-  {
-    id: 6,
-    title: "스웨덴 국립미술관 컬렉션",
-    place: "마이아트뮤지엄",
-    period: "2024.06.05 ~ 2024.09.18",
-  },
-  {
-    id: 7,
-    title: "스웨덴 국립미술관 컬렉션",
-    place: "마이아트뮤지엄",
-    period: "2024.06.05 ~ 2024.09.18",
-  },
-  {
-    id: 8,
-    title: "스웨덴 국립미술관 컬렉션",
-    place: "마이아트뮤지엄",
-    period: "2024.06.05 ~ 2024.09.18",
-  },
-  {
-    id: 9,
-    title: "스웨덴 국립미술관 컬렉션",
-    place: "마이아트뮤지엄",
-    period: "2024.06.05 ~ 2024.09.18",
-  },
-  {
-    id: 10,
-    title: "스웨덴 국립미술관 컬렉션",
-    place: "마이아트뮤지엄",
-    period: "2024.06.05 ~ 2024.09.18",
-  },
-];
 
 const MyNearPage = () => (
   <>
+    <div className="lists-container">
+      <Lists />
+  </div>
+
     {/* 상단 부분 */}
     <div>
       <img
@@ -123,16 +65,7 @@ const MyNearPage = () => (
       <img src={target} alt="target" className="target2" />
       <img src={positionred} alt="positionred" className="positionred2" />
       <img src={filter} alt="filter" className="filter2" />
-      {/* 전시목록 배열 10개 */}
-      {exhibits.map((item, idx) => (
-        <Card
-          key={idx}
-          title={item.title}
-          place={item.place}
-          period={item.date}
-          favorites={item.favorites}
-        />
-      ))}
+     
     </div>
   </>
 );
