@@ -78,7 +78,7 @@ function Content() {
           </button>
           <button
             className={`index-QnA ${activeButton === "qna" ? "clicked" : ""}`}
-            onClick={() => handleButtonClick("qna", "/mynear")}
+            onClick={() => handleButtonClick("qna", "/qna")}
           >
             전시회 주변
           </button>

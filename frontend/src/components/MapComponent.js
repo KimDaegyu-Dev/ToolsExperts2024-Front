@@ -4,8 +4,8 @@ const MapComponent = () => {
   useEffect(() => {
     const container = document.getElementById("map"); // 지도를 표시할 div
     const options = {
-      center: new window.kakao.maps.LatLng(35.1796, 129.0756), // 지도의 중심 좌표 (부산광역시)
-      level: 7, // 지도의 확대 레벨
+      center: new window.kakao.maps.LatLng(37.4802402, 127.0142152), // 지도의 중심 좌표 (예술의전당)
+      level: 5, // 지도의 확대 레벨
     };
 
     const map = new window.kakao.maps.Map(container, options); // 지도 생성

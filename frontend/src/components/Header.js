@@ -15,7 +15,7 @@ export default function Header() {
           <li>
             <span
               onClick={() => {
-                navigate("/detail");
+                navigate("/info");
               }}
             >
               전시 추천
@@ -24,7 +24,7 @@ export default function Header() {
           <li>
             <span
               onClick={() => {
-                navigate("/detail");
+                navigate("/follow");
               }}
             >
               팔로우
@@ -33,7 +33,7 @@ export default function Header() {
           <li>
             <span
               onClick={() => {
-                navigate("/detail");
+                navigate("/mynear");
               }}
             >
               내 근처

@@ -4,7 +4,6 @@ import Lists from "../components/Lists.js";
 import calendar from "../assets/calendar.png";
 import position from "../assets/position.png";
 import arrowDown from "../assets/arrowDown.png";
-import map from "../assets/map.png";
 import target from "../assets/target.png";
 import positionred from "../assets/positionred.png";
 import MapComponent from "../components/MapComponent.js";
@@ -12,10 +11,10 @@ import MapComponent from "../components/MapComponent.js";
 
 const MyNearPage = () => (
   <>
-    <div className="lists-container">
+    <div className="lists-container1">
       <Lists />
     </div>
-    
+      
     {/* 상단 부분 */}
     <div>
       <div className="listall1">

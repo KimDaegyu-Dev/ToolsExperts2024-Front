@@ -53,7 +53,7 @@ function FollowPage() {
             <img className="position5" src={location_white} alt="location_white"/>
           </div>
           <div className="subTitle3">지난 전시 목록</div>
-          <div className="lists-container1">
+          <div className="lists-container2">
             <Lists />
           </div>
         </div>
