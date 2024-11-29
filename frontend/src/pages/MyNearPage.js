@@ -4,19 +4,16 @@ import Lists from "../components/Lists.js";
 import calendar from "../assets/calendar.png";
 import position from "../assets/position.png";
 import arrowDown from "../assets/arrowDown.png";
-import target from "../assets/target.png";
-import positionred from "../assets/positionred.png";
 import MapComponent from "../components/MapComponent.js";
-
 
 const MyNearPage = () => (
   <>
-    <div className="lists-container1">
-      <Lists />
-    </div>
-      
-    {/* 상단 부분 */}
-    <div>
+    {/* MapComponent와 listall1을 하나의 섹션으로 묶음 */}
+    <div className="top-section">
+      <div className="maps">
+        <MapComponent />
+      </div>
+
       <div className="listall1">
         <img
           src={calendar}
@@ -45,16 +42,12 @@ const MyNearPage = () => (
         <div className="filter-text2" style={{ top: "150px", left: "145px" }}>
           필터
         </div>
-        <div className="maps">
-          <MapComponent />
-        </div>
-        <img src={target} alt="target" className="target2" />
-        <img src={positionred} alt="positionred" className="positionred2" />
-        
-        <div className="mapname">
-          스웨덴 국립미술관
-        </div>
       </div>
+    </div>
+
+    {/* Lists 컴포넌트 */}
+    <div className="lists-container1">
+      <Lists />
     </div>
   </>
 );

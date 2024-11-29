@@ -1,259 +1,92 @@
 .container11 {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  margin-top: 60px;
   background-color: black;
-}
-.container1-1 {
-  background-color: black;
-  width: 1300px;
-}
-/* .container1-2 {
-  justify-content: center;
-} */
-.container1-3 {
-  display: flex;
-  justify-content: center;
-  margin-top: -40px;
+  padding: 20px 0;
 }
 
-.small {
-  /* 7월 4주차 */
-
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  margin-top: 25px;
-
-  /* position: absolute; */
-  width: 70px;
-  height: 15px;
-  /* left: 205px;
-  top: 110px; */
-
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 12px;
-
-  color: white;
-}
-.main {
-  /* 지금 주목받고 있는 전시회 BEST 5 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* position: absolute; */
-  width: 300px;
-  height: 60px;
-  /* left: 205px;
-  top: 108px; */
-
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 33px;
-  line-height: 36px;
-
-  color: white;
-}
-.bestContainer {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-  /* position: absolute; */
-  display: flex;
-  justify-content: right;
-  margin-top: 40px;
-  margin-bottom: 60px;
-  align-items: center;
-  gap: 45px;
-  top: 230px;
-  left: 205px;
-}
-.best-link {
-  cursor: pointer;
-}
-.bestBox {
-  background: #f5f5ed;
-  border-radius: 12px;
-  width: 340px;
-  height: 235px;
-}
-.best-content {
-  position: relative;
-  top: 10px;
-  left: 10px;
-  width: 200px;
-  font-family: Pretendard;
-  font-size: 19px;
+.list-title {
+  font-family: "Pretendard", Arial, sans-serif;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 21.6px;
-  color: black;
-  /* text-align: left; */
-  padding: 10px;
-}
-.best-heart {
-  position: absolute;
-  top: 7px;
-  left: 287px;
-}
-.best-locationIcon {
-  position: relative;
-  top: -10px;
-  left: 19px;
-  width: 17px;
-}
-.best-location {
-  position: relative;
-  top: -37px;
-  left: 40px;
-  font-family: Pretendard;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1px;
-  text-align: left;
-  color: black;
-}
-.best-period {
-  position: relative;
-  top: 95px;
-  left: 165px;
-  font-family: Pretendard;
-  font-size: 13.5px;
-  font-weight: 500;
-  line-height: 1px;
-  text-align: left;
-  color: black;
-}
-
-.calender-icon1 {
-  display: flex;
-  position: relative;
-  top: 35px;
-  left: 5px;
-  width: 25px;
-  height: 25px;
-  color: #9f9f9f;
-}
-.calender-text1 {
-  /* 2024. 07. 21 */
-
-  /* width: 80px;
-  height: 21px; */
-  /* left: 10%;
-  top: 300px; */
-  display: flex;
-  position: relative;
-  top: 0px;
-  left: 50px;
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 17px;
-
   color: white;
-}
-.location-icon {
-  /* location_on */
-  display: flex;
-  position: relative;
-  top: -36px;
-  left: 180px;
-  width: 22px;
-  height: 26px;
-  gap: 0px;
-}
-.location-text {
-  /* 부산광역시 전체 */
-  display: flex;
-  position: relative;
-  top: -72px;
-  left: 220px;
-  width: 150px;
-  height: 21px;
-
-  font-family: "Pretendard";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 17px;
-
-  color: white;
+  margin-bottom: 20px;
 }
 
-.list-link {
-  cursor: pointer;
-}
 .listContainer {
-  display: flex;
-  position: relative;
-  top: 10px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 1200px;
-  column-gap: 270px;
-  row-gap: 45px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 두 개씩 배치 */
+  column-gap: 30px; /* 가로 간격 */
+  row-gap: 40px; /* 세로 간격 */
+  width: 800px; /* 전체 너비 고정 */
+  margin: 0 auto;
 }
+
 .listItem {
   display: flex;
   align-items: center;
+  gap: 20px;
+  width: 500px; /* 부모 그리드의 크기 */
 }
+
 .listBox {
+  width: 150px;
+  height: 150px;
   background: #f5f5ed;
   border-radius: 12px;
-  width: 190px;
-  height: 190px;
+  flex-shrink: 0; /* 크기 고정 */
 }
+
 .listText {
-  margin-left: 20px;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
 }
+
+.list-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .list-content {
-  position: relative;
-  top: -15px;
-  left: 0px;
-  font-family: Pretendard;
-  font-size: 18px;
+  font-family: Pretendard, Arial, sans-serif;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 21.6px;
-  text-align: left;
-  padding: 10px;
+  line-height: 1.4;
+  color: white;
+  overflow-wrap: break-word; /* 제목 긴 경우 줄바꿈 */
 }
+
 .list-heart {
-  position: absolute;
-  top: 8px;
-  left: 315px;
   width: 20px;
   height: 20px;
 }
-.list-locationIcon2 {
-  position: relative;
-  top: -35px;
-  left: 10px;
-  width: 20px;
-}
-.list-location {
-  position: relative;
-  top: -78px;
-  left: 20px;
-  font-family: Pretendard;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 13.2px;
-  text-align: left;
-  padding: 10px;
-}
-.list-period {
-  position: relative;
-  top: 0px;
-  left: 160px;
+
+.list-location-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-/* .bestBox.period {
-  text-align: right;
-} */
+.list-locationIcon2 {
+  width: 15px;
+  height: 20px;
+}
+
+.list-location {
+  font-family: Pretendard, Arial, sans-serif;
+  font-size: 14px;
+  margin: 19px 0 0 5px;
+  font-weight: 400;
+  color: white;
+}
+
+.list-period {
+  font-family: Pretendard, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: white;
+}

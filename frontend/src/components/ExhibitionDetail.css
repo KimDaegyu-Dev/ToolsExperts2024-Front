@@ -1,0 +1,26 @@
+.exhibition-detail {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 500px;
+  margin: 20px auto;
+}
+
+.exhibition-detail h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.exhibition-detail p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.exhibition-detail a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1e90ff;
+  text-decoration: underline;
+}

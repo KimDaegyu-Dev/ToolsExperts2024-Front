@@ -1,11 +1,19 @@
 import "../styles/InfoPage.css";
 import Content from "../components/Content.js";
+import ExhibitionDetail from "../components/ExhibitionDetail.js";
 
 function InfoPage() {
+  // 전시회 ID를 설정 (예: 1번 전시회)
+  const exhibitionId = 1;
 
   return (
     <>
       <Content />
+      {/* ExhibitionDetail 컴포넌트 추가 */}
+      <div className="exhibition-detail-section">
+        <h2>전시회 상세 정보</h2>
+        <ExhibitionDetail exhibitionId={exhibitionId} />
+      </div>
       <div className="container">
         <div className="left-section">
           <p>전시장명</p>
@@ -28,4 +36,5 @@ function InfoPage() {
     </>
   );
 }
+
 export default InfoPage;
