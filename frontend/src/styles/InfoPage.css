@@ -3,6 +3,7 @@
   color: white;
 
 }
+
 body {
   display: flex;
   justify-content: center; /* 가로 방향 가운데 정렬 */
@@ -17,7 +18,7 @@ body {
   justify-content: center; /* 내부 가로 정렬 */
   align-items: flex-start; /* 내부 세로 정렬 */
   width: 80%; /* 적절한 너비 지정 */
-  padding: 20px;
+  margin: -800px 0 0 -10px;
   background-color: black; /* 검정색 배경 */
 }
 

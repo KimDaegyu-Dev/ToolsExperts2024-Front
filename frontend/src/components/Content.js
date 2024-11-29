@@ -47,15 +47,15 @@ export default function Content() {
 
       <div className="detailCon2">
         <div className="index1">
-          <a href="#" className="index-info">
+          <button href="#" className="index-info">
             위치안내
-          </a>
-          <a href="#" className="index-review">
+          </button>
+          <button href="#" className="index-review">
             관람 후기
-          </a>
-          <a href="#" className="index-QnA">
+          </button>
+          <button href="#" className="index-QnA">
             전시회 주변
-          </a>
+          </button>
         </div>
       </div>
     </div>
