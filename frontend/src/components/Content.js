@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 import './Content.css'; 
 
-function content() {
+function Content() {
   const [activeButton, setActiveButton] = useState(""); // 클릭된 버튼 상태 관리
   const navigate = useNavigate(); // 페이지 이동을 위한 hook
 
@@ -19,9 +19,9 @@ function content() {
           스웨덴 국립미술관 컬렉션
           <p className="subtitleName">새벽부터 황혼까지</p>
         </div>
-        <div>
-          <div className="poster1">
-            <table className="poster-info">
+        <div className="poster1">
+          <table className="poster-info">
+            <tbody>
               <tr>
                 <td>장소</td>
                 <td>마이아트뮤지엄</td>
@@ -48,13 +48,21 @@ function content() {
                   어린이 (만 4세~만 12세) 12,000원
                 </td>
               </tr>
-            </table>
-          </div>
+            </tbody>
+          </table>
         </div>
-        <button href="#" className="book1">
+        <button
+          className="book1"
+          onClick={() =>
+            (window.location.href =
+              "https://ticket.interpark.com/TPGoodsList.asp?Ca=Eve&SubCa=Eve_O")
+          }
+        >
           예매하러 가기
         </button>
-        <div className="detailCon2">
+      </div>
+
+      <div className="detailCon2">
         <div className="index1">
           <button
             className={`index-info ${activeButton === "info" ? "clicked" : ""}`}
@@ -63,9 +71,7 @@ function content() {
             위치안내
           </button>
           <button
-            className={`index-review ${
-              activeButton === "review" ? "clicked" : ""
-            }`}
+            className={`index-review ${activeButton === "review" ? "clicked" : ""}`}
             onClick={() => handleButtonClick("review", "/detail")}
           >
             관람 후기
@@ -78,8 +84,8 @@ function content() {
           </button>
         </div>
       </div>
-      </div>
     </div>
   );
 }
-export default content;
+
+export default Content;

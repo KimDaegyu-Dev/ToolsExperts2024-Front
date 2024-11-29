@@ -13,6 +13,14 @@
   align-items: center; /* 수직 가운데 정렬 */
 }
 
+.maps {
+  position: absolute;
+  width: 1220px;
+  height: 520px;
+  top: 160px;
+  left: 142px;
+  border-radius: 17px;
+}
 .listall1 {
   position: relative;
   background-color: #000; /* 배경색 검정 */
@@ -71,15 +79,6 @@
   color: #000000;
 }
 
-
-.map2 {
-  position: absolute;
-  width: 1220px;
-  height: 520px;
-  top: 160px;
-  left: 142px;
-  border-radius: 17px;
-}
 
 .target2 {
   position: absolute;

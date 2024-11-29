@@ -7,8 +7,7 @@ import arrowDown from "../assets/arrowDown.png";
 import map from "../assets/map.png";
 import target from "../assets/target.png";
 import positionred from "../assets/positionred.png";
-//import Card from "../components/Card/Card";
-// import CardList from "../components/Card/CardList";
+import MapComponent from "../components/MapComponent.js";
 
 
 const MyNearPage = () => (
@@ -16,7 +15,7 @@ const MyNearPage = () => (
     <div className="lists-container">
       <Lists />
     </div>
-
+    
     {/* 상단 부분 */}
     <div>
       <div className="listall1">
@@ -47,8 +46,9 @@ const MyNearPage = () => (
         <div className="filter-text2" style={{ top: "150px", left: "145px" }}>
           필터
         </div>
-
-        <img src={map} alt="map" className="map2" />
+        <div className="maps">
+          <MapComponent />
+        </div>
         <img src={target} alt="target" className="target2" />
         <img src={positionred} alt="positionred" className="positionred2" />
         
