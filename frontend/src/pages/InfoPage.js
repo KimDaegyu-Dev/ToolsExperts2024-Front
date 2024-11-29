@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/InfoPage.css";
 import Content from "../components/Content.js";
-//import star2 from "../assets/star.png"; // 별 아이콘
 
 function InfoPage() {
   return (

@@ -2,217 +2,201 @@
   font-family: "Pretendard", Arial;
 }
 
-.subList {
-  position: absolute;
-  width: 305px;
-  height: 60px;
-  top: 90px;
-  left: 142px;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000; /* 배경색 설정 */
+  font-family: 'Pretendard', sans-serif;
 }
 
-.author,
-.gallery {
-  position: absolute;
-  height: 19px;
-  top: 160px;
-  font-weight: 500;
-  font-size: 19px;
-  line-height: 22.8px;
-  color: #000000;
-}
-
-.author {
-  width: 89px;
-  left: 145px;
-}
-
-.gallery {
-  width: 121px;
-  left: 661px;
-}
-
-.firstHr {
-  position: absolute;
-  border: 2px solid #dedede;
-  width: 1000px;
-  top: 197px;
-  left: 142px;
-}
-
-.secondHr {
-  position: absolute;
-  border: 4px solid #000000;
-  width: 508px;
-  top: 195px;
-  left: 658px;
-}
-
-.container-horizontal,
-.name-horizontal {
+.listall {  
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-between;
-  margin-top: 20px;
+  flex-direction: column; /* 세로 방향 정렬 */
+  align-items: center; /* 가로 중앙 정렬 */
+  min-height: 100vh; /* 화면 전체 높이 */
+  position: relative;
 }
 
-.circle,
-.box,
-.title,
-.place,
-.heart,
-.date {
+.topTitle {
+  position: absolute; /* 컨테이너 내에서 특정 위치 설정 */
+  top: 100px;
+  left: 35px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  color: #FFFFFF;
+}
+
+.content {
+  position: relative;
+  margin-top: 150px;
+  width: 90%;
+  color: #FFFFFF;
+  overflow: visible; /* 숨겨진 요소 없도록 설정 */
+  min-height: 200px; /* 최소 높이를 설정하여 내부 요소가 보이도록 함 */
+}
+
+
+.subTitle {
   position: absolute;
+  left: -20px;
+  top: 20px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+
+  color: #FFFFFF;
+}
+
+.hrline {
+  width: 1150px; /* 원의 너비 */
+  height: 2px;
+  margin: 35px 0 0 -45px;
+  padding: 20px;
+}
+
+.lists-container1 {
+  position: relative; /* 위치를 조정할 수 있도록 설정 */
+  top: 600px; /* 위에서 아래로 이동 */
+  left: 47px; /* 왼쪽에서 오른쪽으로 이동 */
+  width: 100%; /* 너비를 부모에 맞게 설정 */
+  display: flex; /* 필요한 경우 Flexbox 적용 */
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; /* 수직 가운데 정렬 */
+}
+/* 기존 CSS 유지 + 아래 추가 */
+
+.circle-container {
+  display: flex;
+  gap: 40px;
+  justify-content: flex-start;
+  margin: 10px 0 0 -20px;
+}
+
+.circle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .circle {
   width: 90px;
   height: 90px;
-  top: 224px;
   border-radius: 50%;
   background-color: #d9d9d9;
-}
-
-.circle1 {
-  border: 2px solid #4e80ff;
-  left: 144px;
-}
-.circle2 {
-  left: 271px;
-}
-.circle3 {
-  left: 398px;
-}
-.circle4 {
-  left: 525px;
-}
-.circle5 {
-  left: 652px;
+  position: relative;
 }
 
 .mini {
-  position: absolute;
-  width: 13px;
-  height: 13px;
-  top: 295px;
-  left: 214px;
-  background-color: #4e80ff;
+  width: 16px;
+  height: 16px;
+  background-color: #FF6038;
   border-radius: 50%;
+  position: absolute;
+  top: 70px;
+  right: 5px;
+}
+
+.circle1 {
+  width: 90px; /* 원의 너비 */
+  height: 90px; /* 원의 높이 */
+  border-radius: 50%; /* 원 모양으로 만들기 */
+  background-color: #d9d9d9; /* 배경색 */
+  border: 4px solid #ff5a00;
+  position: relative; /* 테두리 설정 (두께, 스타일, 색상) */
 }
 
 .name {
-  position: absolute;
-  height: 19px;
-  top: 322px;
-  line-height: 15.6px;
+  margin-top: 10px;
   font-size: 13px;
   font-weight: 500;
+  color: white;
+  text-align: center;
 }
 
-.name1 {
-  left: 160px;
-  width: 70px;
-  color: #414141;
-}
-.name2 {
-  left: 283px;
-  width: 80px;
-  color: #7e7e7e;
-}
-.name3 {
-  left: 414px;
-  width: 80px;
-  color: #7e7e7e;
-}
-.name4 {
-  left: 543px;
-  width: 80px;
-  color: #7e7e7e;
-}
-.name5 {
-  left: 677px;
-  width: 80px;
-  color: #7e7e7e;
+.more-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #ff5a00;
+  color: #ff5a00;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-.subTitle1,
 .subTitle2 {
+  margin: 70px 0 0 -15px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.new-box {
+  background: #ececec;
+  border-radius: 15px;
+  width: 100%;
+  height: 253px;
+  margin: 25px 0 0 -18px;
+  padding: 20px;
+}
+
+.gallery {
+  position: absolute;
+  width: 300px;
+  height: 47px;
+
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  top: 630px;
+  left: -10px;
+  color: #FFFFFF;
+}
+
+.where {
+  position: absolute;
+  width: 80px;
+  height: 16px;
+  top: 670px;
+  left: 10px;
+
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+
+  color: #FFFFFF;
+}
+.subTitle3 {
   position: absolute;
   width: 136px;
   height: 19px;
-  left: 145px;
+
+  font-family: 'Pretendard';
+  font-style: normal;
   font-weight: 700;
   font-size: 15px;
   line-height: 18px;
-  color: #353535;
-}
+  top: 780px;
+  left: -10px;
 
-.subTitle1 {
-  top: 415px;
+  color: #FFFFFF;
 }
-.subTitle2 {
-  top: 700px;
-}
+.position5 {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  top: 677px;
+  left: -10px;
 
-.box {
-  width: 380px;
-  height: 183px;
-  left: 145px;
-  top: 460px;
-  background: #ececec;
-  border-radius: 12px;
-  padding: 10px;
-  width: 30%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.box1,
-.box2,
-.box3,
-.box4,
-.box5,
-.box6,
-.box7,
-.box8,
-.box9,
-.box10 {
-  width: 183px;
-  height: 183px;
-  background: #ececec;
-  border-radius: 12px;
-}
-
-.collection {
-  width: 210px;
-  height: 47px;
-  font-weight: 600;
-  font-size: 18px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.follow-heart {
-  width: 20px;
-  height: 20px;
-}
-
-.follow-locationIcon {
-  width: 20px;
-  height: 20px;
-}
-
-.follow-location {
-  margin-top: 5px;
-  font-size: 14px;
-  color: #888;
-}
-
-.follow-period {
-  margin-top: 5px;
-  font-size: 14px;
-  color: #888;
 }
