@@ -1,6 +1,17 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; 
 import './Content.css'; 
 
-export default function Content() {
+function content() {
+  const [activeButton, setActiveButton] = useState(""); // 클릭된 버튼 상태 관리
+  const navigate = useNavigate(); // 페이지 이동을 위한 hook
+
+  // 버튼 클릭 핸들러
+  const handleButtonClick = (buttonName, path) => {
+    setActiveButton(buttonName); // 클릭된 버튼 상태 업데이트
+    navigate(path); // 지정된 경로로 이동
+  };
+
   return (
     <div className="detailCon">
       <div className="detailCon1">
@@ -40,24 +51,35 @@ export default function Content() {
             </table>
           </div>
         </div>
-        <a href="#" className="book1">
+        <button href="#" className="book1">
           예매하러 가기
-        </a>
-      </div>
-
-      <div className="detailCon2">
+        </button>
+        <div className="detailCon2">
         <div className="index1">
-          <button href="#" className="index-info">
+          <button
+            className={`index-info ${activeButton === "info" ? "clicked" : ""}`}
+            onClick={() => handleButtonClick("info", "/info")}
+          >
             위치안내
           </button>
-          <button href="#" className="index-review">
+          <button
+            className={`index-review ${
+              activeButton === "review" ? "clicked" : ""
+            }`}
+            onClick={() => handleButtonClick("review", "/detail")}
+          >
             관람 후기
           </button>
-          <button href="#" className="index-QnA">
+          <button
+            className={`index-QnA ${activeButton === "qna" ? "clicked" : ""}`}
+            onClick={() => handleButtonClick("qna", "/mynear")}
+          >
             전시회 주변
           </button>
         </div>
       </div>
+      </div>
     </div>
   );
 }
+export default content;
