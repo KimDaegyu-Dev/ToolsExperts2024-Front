@@ -54,7 +54,7 @@ export default function Header() {
             <span onClick={() => handleNavigation("/landing")}>전시 추천</span>
           </li>
           <li>
-            <span onClick={() => handleNavigation("/detail")}>팔로우</span>
+            <span onClick={() => handleNavigation("/follow")}>팔로우</span>
           </li>
           <li>
             <span onClick={() => handleNavigation("/mynear")}>내 근처</span>

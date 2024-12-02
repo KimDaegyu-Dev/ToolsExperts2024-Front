@@ -9,6 +9,7 @@
   left: 0;
   height: 60px;
   padding: 0 20px;
+  z-index: 1000;
 }
 
 .logo {
@@ -54,9 +55,10 @@
   border-radius: 17px;
   border: none;
   outline: none;
-  text-decoration: none !important;
+  text-decoration: none;
   padding-left: 50px;
   box-shadow: none;
+  color: black;
   background: #ff6038;
   transition: background-color 0.3s ease;
 }
@@ -127,5 +129,5 @@
   pointer-events: auto;
   padding: 20px;
   border-radius: 8px;
-  z-index: 20;
+  z-index: 900;
 }
