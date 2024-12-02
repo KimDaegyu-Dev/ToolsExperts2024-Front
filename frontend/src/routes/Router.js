@@ -9,6 +9,7 @@ import MyPage from "../pages/MyPage";
 import QnAPage from "../pages/QnAPage";
 import SchedulePage from "../pages/SchedulePage";
 import LoginPage from "../pages/LoginPage";
+import AdminPage from "../pages/AdminPage";
 export const Router = () => {
   return (
     <Routes>
@@ -24,6 +25,7 @@ export const Router = () => {
       <Route path="/schedule" element={<SchedulePage />} />
       {/* API 연결 배우는 용도 페이지 */}
       <Route path="/learn" element={<LearnPage />} />
+      <Route path="/admin" element={<AdminPage />} />
     </Routes>
   );
 };

@@ -1,6 +1,17 @@
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; 
 import './Content.css'; 
 
-export default function Content() {
+function Content() {
+  const [activeButton, setActiveButton] = useState(""); // 클릭된 버튼 상태 관리
+  const navigate = useNavigate(); // 페이지 이동을 위한 hook
+
+  // 버튼 클릭 핸들러
+  const handleButtonClick = (buttonName, path) => {
+    setActiveButton(buttonName); // 클릭된 버튼 상태 업데이트
+    navigate(path); // 지정된 경로로 이동
+  };
+
   return (
     <div className="detailCon">
       <div className="detailCon1">
@@ -8,9 +19,9 @@ export default function Content() {
           스웨덴 국립미술관 컬렉션
           <p className="subtitleName">새벽부터 황혼까지</p>
         </div>
-        <div>
-          <div className="poster1">
-            <table className="poster-info">
+        <div className="poster1">
+          <table className="poster-info">
+            <tbody>
               <tr>
                 <td>장소</td>
                 <td>마이아트뮤지엄</td>
@@ -37,27 +48,44 @@ export default function Content() {
                   어린이 (만 4세~만 12세) 12,000원
                 </td>
               </tr>
-            </table>
-          </div>
+            </tbody>
+          </table>
         </div>
-        <a href="#" className="book1">
+        <button
+          className="book1"
+          onClick={() =>
+            (window.location.href =
+              "https://ticket.interpark.com/TPGoodsList.asp?Ca=Eve&SubCa=Eve_O")
+          }
+        >
           예매하러 가기
-        </a>
+        </button>
       </div>
 
       <div className="detailCon2">
         <div className="index1">
-          <a href="#" className="index-info">
+          <button
+            className={`index-info ${activeButton === "info" ? "clicked" : ""}`}
+            onClick={() => handleButtonClick("info", "/info")}
+          >
             위치안내
-          </a>
-          <a href="#" className="index-review">
+          </button>
+          <button
+            className={`index-review ${activeButton === "review" ? "clicked" : ""}`}
+            onClick={() => handleButtonClick("review", "/detail")}
+          >
             관람 후기
-          </a>
-          <a href="#" className="index-QnA">
+          </button>
+          <button
+            className={`index-QnA ${activeButton === "qna" ? "clicked" : ""}`}
+            onClick={() => handleButtonClick("qna", "/qna")}
+          >
             전시회 주변
-          </a>
+          </button>
         </div>
       </div>
     </div>
   );
 }
+
+export default Content;
