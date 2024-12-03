@@ -3,6 +3,11 @@ import "../styles/DetailPage.css";
 import star from "../assets/star.png"; // 별 아이콘
 import orangeStar from "../assets/orangeStar.png"; // 평점 별 아이콘
 import arrow from "../assets/arrow.png"; // 별 아이콘
+import { useParams } from "react-router-dom";
+import ExhibitionDetail from "../components/ExhibitionDetail";
+import { useExhibitionDetail } from "../hooks/useExhibits";
+import { getExhibitionDetail } from "../api/exhibit";
+import { useQuery } from "react-query";
 const data1 = [
   {
     id: "review1",
@@ -53,24 +58,39 @@ function Review({ name, date, content }) {
 }
 
 function DetailPage() {
+  const { id } = useParams();
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["exhibitionDetail", id],
+    queryFn: () => getExhibitionDetail(id),
+  });
+
+  const exhibitionData = data?.exhibitionDetail;
+  const placeData = data?.venue;
   return (
     <>
       <div className="detailCon">
         <div className="detailCon1">
           <div className="titleName">
-            스웨덴 국립미술관 컬렉션
+            {exhibitionData?.title}
             <p className="subtitleName">새벽부터 황혼까지</p>
           </div>
           <div>
             <div className="poster1">
+              {/* <img
+                src={data.thumbnail}
+                alt="poster"
+                style={{ width: "80px" }}
+              /> */}
               <table className="poster-info">
                 <tr>
                   <td>장소</td>
-                  <td>마이아트뮤지엄</td>
+                  <td>{placeData ? placeData.name : "장소 정보 없음"}</td>
                 </tr>
                 <tr>
                   <td>기간</td>
-                  <td>2024.03.21~2024.08.25</td>
+                  <td>
+                    {exhibitionData?.startDate}~{exhibitionData?.endDate}
+                  </td>
                 </tr>
                 <tr>
                   <td>관람시간</td>
@@ -83,17 +103,23 @@ function DetailPage() {
                 <tr>
                   <td className="price1">가격</td>
                   <td>
-                    성인 (만 19세 이상) 20,000원
-                    <br />
-                    청소년 (만 13세~만 18세) 16,000원
-                    <br />
-                    어린이 (만 4세~만 12세) 12,000원
+                    {exhibitionData ? (
+                      exhibitionData.price
+                    ) : (
+                      <>
+                        성인 (만 19세 이상) 가격 정보 없음
+                        <br />
+                        청소년 (만 13세~만 18세) 가격 정보 없음
+                        <br />
+                        어린이 (만 4세~만 12세) 가격 정보 없음
+                      </>
+                    )}
                   </td>
                 </tr>
               </table>
             </div>
           </div>
-          <a href="#" className="book1">
+          <a href={placeData?.place_url} className="book1">
             예매하러 가기
           </a>
         </div>

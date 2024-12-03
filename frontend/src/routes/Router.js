@@ -14,7 +14,7 @@ export const Router = () => {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/detail" element={<DetailPage />} />
+      <Route path="/detail/:id" element={<DetailPage />} />
       <Route path="/follow" element={<FollowPage />} />
       <Route path="/info" element={<InfoPage />} />
       <Route path="/landing" element={<LandingPage />} />
