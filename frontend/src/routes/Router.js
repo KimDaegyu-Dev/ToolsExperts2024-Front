@@ -10,6 +10,7 @@ import QnAPage from "../pages/QnAPage";
 import SchedulePage from "../pages/SchedulePage";
 import LoginPage from "../pages/LoginPage";
 import AdminPage from "../pages/AdminPage";
+import RegisterPage from "../pages/RegisterPage";
 export const Router = () => {
   return (
     <Routes>
@@ -26,6 +27,7 @@ export const Router = () => {
       {/* API 연결 배우는 용도 페이지 */}
       <Route path="/learn" element={<LearnPage />} />
       <Route path="/admin" element={<AdminPage />} />
+      <Route path="/register" element={<RegisterPage />} />
     </Routes>
   );
 };

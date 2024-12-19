@@ -1,14 +1,14 @@
 .login {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #000000; 
+  background-color: #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   height: 100vh;
-  color: #FFFFFF;
-  padding-top: 20px; 
+  color: #ffffff;
+  padding-top: 20px;
 }
 
 .logtit {
@@ -26,11 +26,11 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .login-container {
-  background-color: #000000; 
+  background-color: #000000;
   padding: 60px;
   border-radius: 10px;
   text-align: center;
@@ -40,7 +40,7 @@
 h1 {
   margin-bottom: 50px;
   font-size: 60px;
-  color: #FFFFFF; 
+  color: #ffffff;
   font-weight: bold;
 }
 
@@ -50,17 +50,21 @@ form {
   align-items: center;
 }
 
-input[type="id"], input[type="password"] {
+input[type="id"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
   width: 550px;
   height: 40px;
   padding: 15px;
   padding-left: 30px;
   margin-bottom: 25px;
-  background-color: black; 
-  border: 1px solid #929292; 
+  background-color: black;
+  border: 1px solid #929292;
   border-radius: 50px;
   font-size: 20px;
-  color: #FFFFFF; 
+  color: #ffffff;
 }
 
 button {
@@ -68,10 +72,10 @@ button {
   height: 86px;
   margin-top: 50px;
   padding: 15px;
-  background-color: #FF6038; 
+  background-color: #ff6038;
   border: none;
   border-radius: 50px;
-  color: #FFFFFF; 
+  color: #ffffff;
   font-size: 25px;
   font-weight: 700;
   cursor: pointer;
@@ -79,12 +83,12 @@ button {
 }
 
 button:hover {
-  background-color: #E65C00;
+  background-color: #e65c00;
 }
 
 button:active {
   transform: scale(0.98); /* 버튼이 살짝 눌리는 효과 */
-  background-color: #D95400; /* 클릭 시 배경색 변경 */
+  background-color: #d95400; /* 클릭 시 배경색 변경 */
 }
 
 .options {
@@ -92,14 +96,14 @@ button:active {
   display: flex;
   justify-content: space-between;
   font-size: 16px;
-  color: #A2A2A2; 
+  color: #a2a2a2;
   margin-top: 70px;
   margin-left: 100px;
   margin-right: 120px;
 }
 
 .options a {
-  color: #A2A2A2; 
+  color: #a2a2a2;
   text-decoration: none;
 }
 
