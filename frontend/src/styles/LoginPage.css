@@ -11,23 +11,37 @@
   padding-top: 20px; 
 }
 
+.logtit {
+  width: 340px;
+  height: 55px;
+  margin-top: -570px;
+  margin-bottom: 120px;
+  margin-left: 110px;
+  margin-right: 110px;
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 84px;
+  line-height: 80px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
 .login-container {
   background-color: #000000; 
   padding: 60px;
   border-radius: 10px;
   text-align: center;
-  width: 380px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 580px;
 }
 
 h1 {
-margin-bottom: 50px;
-font-size: 60px;
-color: #FFFFFF; 
-font-weight: bold;
+  margin-bottom: 50px;
+  font-size: 60px;
+  color: #FFFFFF; 
+  font-weight: bold;
 }
 
 form {
@@ -37,47 +51,58 @@ form {
 }
 
 input[type="id"], input[type="password"] {
-width: 100%;
-padding: 15px;
-margin-bottom: 25px;
-background-color: #1A1A1A; 
-border: 1px solid #FFFFFF; 
-border-radius: 25px;
-font-size: 18px;
-color: #FFFFFF; 
+  width: 550px;
+  height: 40px;
+  padding: 15px;
+  padding-left: 30px;
+  margin-bottom: 25px;
+  background-color: black; 
+  border: 1px solid #929292; 
+  border-radius: 50px;
+  font-size: 20px;
+  color: #FFFFFF; 
 }
 
 button {
-width: 100%;
-padding: 15px;
-background-color: #FF6F00; 
-border: none;
-border-radius: 25px;
-color: #FFFFFF; 
-font-size: 20px;
-cursor: pointer;
-transition: background-color 0.3s;
+  width: 610px;
+  height: 86px;
+  margin-top: 50px;
+  padding: 15px;
+  background-color: #FF6038; 
+  border: none;
+  border-radius: 50px;
+  color: #FFFFFF; 
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s ease-in-out;
 }
 
 button:hover {
-background-color: #E65C00;
+  background-color: #E65C00;
+}
+
+button:active {
+  transform: scale(0.98); /* 버튼이 살짝 눌리는 효과 */
+  background-color: #D95400; /* 클릭 시 배경색 변경 */
 }
 
 .options {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
-  font-size: 14px;
-  color: #FFFFFF; 
-  gap: 15px; 
+  font-size: 16px;
+  color: #A2A2A2; 
+  margin-top: 70px;
+  margin-left: 100px;
+  margin-right: 120px;
 }
 
 .options a {
-  color: #FFFFFF; 
+  color: #A2A2A2; 
   text-decoration: none;
 }
 
 .options a:hover {
   text-decoration: underline;
 }
-
