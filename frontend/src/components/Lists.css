@@ -16,7 +16,7 @@
 
 .listContainer {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 두 개씩 배치 */
+  grid-template-columns: repeat(2, 1fr); /*두 개씩 배치*/
   column-gap: 30px; /* 가로 간격 */
   row-gap: 40px; /* 세로 간격 */
   width: 800px; /* 전체 너비 고정 */
