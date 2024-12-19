@@ -5,6 +5,7 @@ import calendar from "../assets/calendar.png";
 import position from "../assets/position.png";
 import arrowDown from "../assets/arrowDown.png";
 import MapComponent from "../components/MapComponent.js";
+import target from "../assets/target.png";
 
 const MyNearPage = () => (
   <>
@@ -12,6 +13,8 @@ const MyNearPage = () => (
     <div className="top-section">
       <div className="maps">
         <MapComponent />
+        {/* target 아이콘 추가 */}
+        <img src={target} alt="target-icon" className="target-icon" />
       </div>
 
       <div className="listall1">
