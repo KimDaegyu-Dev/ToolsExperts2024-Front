@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../styles/SchedulePage.css";
 import arrow_back_ios from "../assets/arrow_back_ios.png";
-import Ellipse from "../assets/Ellipse.png";
-import Rectangle from "../assets/Rectangle.png";
-
 
 const plans = [
-  { title: "스웨덴 국립미술관 컬렉션", startDay: 9, duration: 6 },
-  { title: "스웨덴 국립미술관 컬렉션", startDay: 11, duration: 5 },
+  { title: "스웨덴 국립미술관 컬렉션", startDay: 9, duration: 6, type: "first" },
+  { title: "현대 미술 특별전", startDay: 11, duration: 5, type: "second" },
 ];
 
 const SchedulePage = () => {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
   const [currentMonth, setCurrentMonth] = useState(new Date().getMonth());
+  const today = new Date();
 
   const getDaysInMonth = (year, month) => {
     return new Date(year, month + 1, 0).getDate();
@@ -81,133 +79,93 @@ const SchedulePage = () => {
   const calendar = generateCalendar(currentYear, currentMonth);
 
   return (
-        <div className="agenda">
-            <div className="container">
-            <div className="year">
-        <img
+    <div className="agenda">
+      <div className="container">
+        <div className="year">
+          <img
             className="arrow_back_ios"
             src={arrow_back_ios}
             alt="Previous Month"
             onClick={handlePrevMonth}
-        />
-    <div className="month">
-        {currentYear} {monthNames[currentMonth]}
-    </div>
-    <img
-        className="arrow_next_ios"
-        src={arrow_back_ios}
-        alt="Next Month"
-        onClick={handleNextMonth}
-        style={{ transform: 'none' }} 
-    />
-</div>
+          />
+          <div className="month">
+            {`${currentYear}년 ${monthNames[currentMonth]}`}
+          </div>
+          <img
+            className="arrow_next_ios"
+            src={arrow_back_ios}
+            alt="Next Month"
+            onClick={handleNextMonth}
+            style={{ transform: "none" }}
+          />
+        </div>
 
         <table className="calendar">
-            <tbody>
+          <tbody>
             {calendar.map((week, weekIndex) => (
-                <tr key={weekIndex}>
+              <tr key={weekIndex}>
                 {week.map((day, dayIndex) => (
-                    <td
-                    key={dayIndex}
-                    className={
-                        day === new Date().getDate() &&
-                        currentMonth === new Date().getMonth() &&
-                        currentYear === new Date().getFullYear()
-                        ? "today"
-                        : "day"
-                    }
-                    >
+                  <td key={dayIndex} className="day">
                     {day ? (
-                        <div className="day-container">
-                        {day === new Date().getDate() &&
-                        currentMonth === new Date().getMonth() &&
-                        currentYear === new Date().getFullYear() ? (
-                            <>
-                            <img
-                                className="Ellipse-today"
-                                src={Ellipse}
-                                alt="Ellipse-today"
-                            />
+                      <div className="day-container">
+                        {/* 오늘 날짜 강조 */}
+                        {day === today.getDate() &&
+                        currentMonth === today.getMonth() &&
+                        currentYear === today.getFullYear() ? (
+                          <>
+                            <div className="Ellipse-today"></div>
                             <div className="day-number">{day}</div>
-                            </>
+                          </>
                         ) : (
-                            <div className="day-number">{day}</div>
+                          <div className="day-number">{day}</div>
                         )}
+                        {/* 일정 표시 */}
                         {plans.map((plan, index) => {
-                            if (index === 0) {
-                                if (day === plan.startDay) {
-                                    return (
-                                        <div key={index} className="first-plan">
-                                            <span className="first-title">
-                                            {plan.title}
-                                            </span>
-                                            <div className="first-Rectangle-container">
-                                            <img
-                                                className="first-Rectangle"
-                                                src={Rectangle}
-                                                alt="Rectangle"
-                                            />
-                                            </div>
-                                        </div>
-                                    );
-                            } else if (
-                                day > plan.startDay &&
-                                day < plan.startDay + plan.duration
-                            ) {
-                                return (
-                                <div key={index} className="first-Rectangle-container">
-                                    <img
-                                    className="first-Rectangle"
-                                    src={Rectangle}
-                                    alt="Rectangle"
-                                    />
-                                </div>
-                                );
-                            }
-                            } else if (index === 1) {
-                            if (day === plan.startDay) {
-                                return (
-                                <div key={index} className="second-plan">
-                                    <span className="second-title">
+                          const isStartDay = day === plan.startDay;
+                          const isWithinDuration =
+                            day > plan.startDay &&
+                            day < plan.startDay + plan.duration;
+
+                          if (isStartDay || isWithinDuration) {
+                            const containerClass =
+                              plan.type === "first"
+                                ? "first-Rectangle-container"
+                                : "second-Line-container";
+
+                            const barClass =
+                              plan.type === "first"
+                                ? "first-Rectangle"
+                                : "second-Line";
+
+                            const titleClass =
+                              plan.type === "first"
+                                ? "first-title"
+                                : "second-title";
+
+                            return (
+                              <div key={index} className={containerClass}>
+                                {isStartDay && (
+                                  <span className={titleClass}>
                                     {plan.title}
-                                    </span>
-                                    <div className="second-Line-container">
-                                    <img
-                                        className="second-Line"
-                                        src={Rectangle}
-                                        alt="Rectangle"
-                                    />
-                                    </div>
-                                </div>
-                                );
-                            } else if (
-                                day > plan.startDay &&
-                                day < plan.startDay + plan.duration
-                            ) {
-                                return (
-                                <div key={index} className="second-Line-container">
-                                    <img
-                                    className="second-Line"
-                                    src={Rectangle}
-                                    alt="Rectangle"
-                                    />
-                                </div>
-                                );
-                            }
-                            }
-                            return null;
+                                  </span>
+                                )}
+                                <div className={barClass}></div>
+                              </div>
+                            );
+                          }
+                          return null;
                         })}
-                        </div>
+                      </div>
                     ) : (
-                        <div>&nbsp;</div>
+                      <div>&nbsp;</div>
                     )}
-                    </td>
+                  </td>
                 ))}
-                </tr>
+              </tr>
             ))}
-            </tbody>
+          </tbody>
         </table>
-        </div>
+      </div>
     </div>
   );
 };
