@@ -4,8 +4,8 @@ import star from "../assets/star.png"; // 별 아이콘
 import orangeStar from "../assets/orangeStar.png"; // 평점 별 아이콘
 import arrow from "../assets/arrow.png"; // 별 아이콘
 import { useParams } from "react-router-dom";
-import ExhibitionDetail from "../components/ExhibitionDetail";
-import { useExhibitionDetail } from "../hooks/useExhibits";
+// import ExhibitionDetail from "../components/ExhibitionDetail";
+// import { useExhibitionDetail } from "../hooks/useExhibits";
 import { getExhibitionDetail } from "../api/exhibit";
 import { useQuery } from "react-query";
 const data1 = [
@@ -150,19 +150,19 @@ function DetailPage() {
             <hr className="rating-line" />
             <p className="ageGroup-title">연령대별 평점 비율</p>
             <div className="ageGroup">
-              <div>10대</div>
+              <div className="texts">10대</div>
               <hr className="max" />
               <hr className="teen" />
               <div className="num num1">29</div>
-              <div>20~30대</div>
+              <div style={{color: "#FF6038", fontWeight: "600"}}>20~30대</div>
               <hr className="max2" />
               <hr className="twenty" />
               <div className="num num2">72</div>
-              <div>40~50대</div>
+              <div className="texts">40~50대</div>
               <hr className="max3" />
               <hr className="forty" />
               <div className="num num3">41</div>
-              <div>60대 이상</div>
+              <div className="texts">60대 이상</div>
               <hr className="max4" />
               <hr className="sixty" />
               <div className="num num4">3</div>

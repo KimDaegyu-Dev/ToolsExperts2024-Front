@@ -41,7 +41,7 @@ function FollowPage() {
               <button className="more-button">
               <img className="cross" src={cross} alt="cross" />
               </button>
-              <div className="name">더보기</div>
+              <div className="name etc">더보기</div>
             </div>
           </div>
 

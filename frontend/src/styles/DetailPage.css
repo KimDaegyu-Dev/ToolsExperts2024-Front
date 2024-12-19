@@ -103,6 +103,7 @@
   text-align: center;
   align-content: center;
   color: #ffffff;
+  cursor: pointer;
 }
 .index-info,
 .index-review,
@@ -149,6 +150,7 @@
   left: 120px;
   font-size: 20px;
   font-weight: 600;
+  color: black;
 }
 .rating-num {
   position: absolute;
@@ -164,6 +166,7 @@
   font-weight: 600;
   line-height: 72px;
   text-align: left;
+  color: black;
 }
 .rating-star {
   position: relative;
@@ -187,20 +190,28 @@
 }
 .ageGroup-title {
   position: relative;
-  top: 20px;
+  top: 15px;
   left: 660px;
+  color: black;
+  font-weight: 600;
+  font-size: 20px;
 }
 .ageGroup {
   position: absolute;
-  top: 65px;
+  top: 75px;
   left: 480px;
   width: 500px;
   height: 60px;
   display: grid;
   grid-gap: 15px;
-
-  color: #000000;
+  color: black;
 }
+.texts {
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
+}
+
 .max {
   position: absolute;
   width: 325px;
@@ -294,6 +305,9 @@
 .num {
   margin-top: 0px;
   text-align: center;
+  color: black;
+  font-weight: 500;
+  font-size: 15px;
 }
 .num1 {
   position: absolute;
@@ -414,7 +428,7 @@
   font-weight: 500;
   line-height: 22px;
   text-align: left;
-  color: white;
+  color: #BEBEBE;
 }
 .review-content {
   position: relative;

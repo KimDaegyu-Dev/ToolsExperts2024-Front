@@ -9,7 +9,7 @@ export default function ExhibitionDetail({ exhibitionId }) {
     queryFn: () => getExhibitionDetail(exhibitionId),
     enabled: !!exhibitionId, // exhibitionId가 있을 때만 실행
   });
-  const exhibitionData = data.eexhibitionDetail;
+  const exhibitionData = data.exhibitionDetail;
   const placeData = data.venue;
 
   // 로딩 중 상태 처리
