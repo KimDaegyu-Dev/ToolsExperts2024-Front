@@ -1,56 +1,39 @@
 import React, { useState } from "react";
-// import "../styles/QnAPage.css";
+import { useParams } from "react-router-dom";
+import { useQuery } from "react-query";
+import "../styles/QnAPage.css";
 import arrow from "../assets/arrow.png";
 import box from "../assets/box.png";
+import { getExhibitionDetail } from "../api/exhibit";
 
 const categories = [
-  {
-    name: "Top",
-    value: "Top",
-  },
-  {
-    name: "이용문의",
-    value: "이용문의",
-  },
-  {
-    name: "자주 묻는 질문",
-    value: "자주 묻는 질문",
-  },
-  {
-    name: "운영정책",
-    value: "운영정책",
-  },
-  {
-    name: "기타",
-    value: "기타",
-  },
+  { name: "주변 관광지", value: "주변 관광지" },
+  { name: "전시장의 다른 전시", value: "전시장의 다른 전시" },
 ];
 
 const qnaList = [
   {
-    category: "이용문의",
-    question: "예매하기 버튼이 안 눌러지는데 해결방법이 궁금해요.",
+    category: "주변 관광지",
+    question: "관광지",
     answer: "내용",
   },
   {
-    category: "자주 묻는 질문",
-    question:
-      "전시 예매 후 다시 취소하고 싶은데, 환불 절차는 어디에서 밟을 수 있나요?",
-    answer: "내용",
-  },
-  {
-    category: "운영정책",
-    question: "운영정책?",
-    answer: "내용",
-  },
-  {
-    category: "기타",
-    question: "기타?",
+    category: "전시장의 다른 전시",
+    question: "전시",
     answer: "내용",
   },
 ];
 
 function QnA() {
+  const { id } = useParams();
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["exhibitionDetail", id],
+    queryFn: () => getExhibitionDetail(id),
+  });
+
+  const exhibitionData = data?.exhibitionDetail;
+  const placeData = data?.venue;
+
   const [activeIndex, setActiveIndex] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("Top");
 
@@ -64,50 +47,59 @@ function QnA() {
 
   return (
     <>
-      <div className="title">
-        스웨덴 국립미술관 컬렉션
-        <p className="subtitle">새벽부터 황혼까지</p>
-      </div>
-      <div>
-        <div className="poster">
-          <table className="info">
-            <tr>
-              <td>장소</td>
-              <td>마이아트뮤지엄</td>
-            </tr>
-            <tr>
-              <td>기간</td>
-              <td>2024.03.21~2024.08.25</td>
-            </tr>
-            <tr>
-              <td>관람시간</td>
-              <td>60분</td>
-            </tr>
-            <tr>
-              <td>관람연령</td>
-              <td>전체관람가</td>
-            </tr>
-            <tr>
-              <td className="price">가격</td>
-              <td>
-                성인 (만 19세 이상) 20,000원
-                <br />
-                청소년 (만 13세~만 18세) 16,000원
-                <br />
-                어린이 (만 4세~만 12세) 12,000원
-              </td>
-            </tr>
-          </table>
+      <div className="detailCon1">
+        <div className="titleName">
+          {exhibitionData?.title}
+          <p className="subtitleName">새벽부터 황혼까지</p>
         </div>
+        <div>
+          <div className="poster1">
+            <table className="poster-info">
+              <tr>
+                <td>장소</td>
+                <td>{placeData ? placeData.name : "장소 정보 없음"}</td>
+              </tr>
+              <tr>
+                <td>기간</td>
+                <td>
+                  {exhibitionData?.startDate}~{exhibitionData?.endDate}
+                </td>
+              </tr>
+              <tr>
+                <td>관람시간</td>
+                <td>60분</td>
+              </tr>
+              <tr>
+                <td>관람연령</td>
+                <td>전체관람가</td>
+              </tr>
+              <tr>
+                <td className="price1">가격</td>
+                <td>
+                  성인: 20,000원<br />
+                  청소년: 16,000원<br />
+                  어린이: 12,000원
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <a href={placeData?.place_url} className="book1">
+          예매하러 가기
+        </a>
       </div>
-      <div className="book">예매하기</div>
-      <table className="index">
-        <tr>
-          <td>관람정보</td>
-          <td>리뷰</td>
-          <td>Q&A</td>
-        </tr>
-      </table>
+
+      <div className="index1">
+            <a href="#" className="index-info">
+              위치안내
+            </a>
+            <a href="#" className="index-review">
+              관람 후기
+            </a>
+            <a href="#" className="index-QnA">
+              전시회 주변
+            </a>
+      </div>
 
       <div className="category-container">
         {categories.map((category) => (
@@ -122,6 +114,7 @@ function QnA() {
           </div>
         ))}
       </div>
+
       <div className="accordion">
         {filteredQnA.map((item, index) => (
           <div className="accordion-item" key={index}>
@@ -147,6 +140,7 @@ function QnA() {
           </div>
         ))}
       </div>
+
       <div className="footer-buttons">
         <div className="box-container">
           <img className="box" src={box} alt="box" />

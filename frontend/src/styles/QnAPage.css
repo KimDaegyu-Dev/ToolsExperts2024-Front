@@ -1,82 +1,93 @@
-body {
-  font-family: Arial, sans-serif;
+.detailCon1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 110px;
+}
+.detailCon2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  overflow: hidden;
 }
 
-.title {
+.titleName {
   position: relative;
   width: 400px;
   height: 60px;
-  top: 90px;
-  left: 210px;
-
+  top: 0%;
+  left: -90%;
   font-size: 30px;
   font-weight: 600;
   line-height: 36px;
   text-align: left;
+  color: white;
 }
-
-.subtitle {
+.subtitleName {
   width: 305px;
   height: 60px;
-  top: 135px;
-  left: 200px;
   gap: 0px;
   opacity: 0px;
-
   font-family: Pretendard;
   font-size: 16px;
   font-weight: 500;
   line-height: 19.2px;
   text-align: left;
+  color: white;
 }
-
-.poster {
+.poster1 {
   position: relative;
   width: 335px;
-  height: 446px;
-  top: 150px;
-  left: 210px;
+  height: 480px;
+  top: 40px;
+  left: -116%;
   gap: 0px;
   border-radius: 12px;
   opacity: 0px;
-  background: #ececec;
+  background: #f5f2ed;
 }
-
-.info {
+.poster-info {
   position: absolute;
-  top: 0px;
-  left: 400px;
+  top: 0%;
+  left: 120%;
   width: 600px;
   height: 416px;
-
   font-family: Pretendard;
   font-size: 17px;
   font-weight: 500;
   line-height: 20.4px;
   text-align: left;
+  color: white;
 }
-
-.price {
+.price1 {
   padding-bottom: 40px;
 }
 
-.book {
+.book1 {
   position: relative;
-  width: 183px;
-  height: 67px;
-  top: 100px;
-  left: 1130px;
-  gap: 0px;
+  top: -30px;
+  left: 110%;
+  width: 260px;
+  height: 80px;
   border-radius: 12px;
-  opacity: 0px;
-  background: #4e80ff;
-
+  text-decoration-line: none;
   font-family: Pretendard;
   font-size: 27px;
   font-weight: 700;
   line-height: 67px;
   text-align: center;
+  align-content: center;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.index1 {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .index {
@@ -111,8 +122,7 @@ body {
   display: flex;
   justify-content: space-around;
   width: 500px;
-  margin-top: 200px;
-  padding: 0 200px;
+  margin-top: 50px;
 }
 
 .category-item {
@@ -121,30 +131,30 @@ body {
   padding: 8px 10px;
   border-radius: 10px;
   transition: background-color 0.3s ease;
-  color: #6e6e6e;
-  border: 1px solid #a7a7a7;
+  color: white;
+  border: 2px solid #a7a7a7;
 }
 
 .category-item:hover,
 .category-item.active {
-  background-color: #000000;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 .accordion {
-  width: 75%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 20px;
-  padding: 0 200px;
+  background-color: #000;
 }
 
 .accordion-item {
   border-bottom: 1px solid #ccc;
   margin-bottom: 10px;
+  background-color: #000;
 }
 
 .accordion-button {
-  background-color: white;
   border: none;
   text-align: left;
   padding: 15px;
@@ -154,6 +164,14 @@ body {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  background-color: #000000; 
+  color: #ffffff;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:hover {
+  background-color: #333333;
 }
 
 .arrow {
@@ -168,8 +186,8 @@ body {
 
 .accordion-content {
   padding: 19px;
-  background-color: #f9f9f9;
-  color: #585858;
+  background-color: #000; 
+  color: #ffffff; 
 }
 
 .accordion-category {
