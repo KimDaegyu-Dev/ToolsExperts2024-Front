@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/DetailPage.css";
 import star from "../assets/star.png"; // 별 아이콘
 import orangeStar from "../assets/orangeStar.png"; // 평점 별 아이콘
@@ -6,8 +6,9 @@ import arrow from "../assets/arrow.png"; // 별 아이콘
 import { useParams } from "react-router-dom";
 // import ExhibitionDetail from "../components/ExhibitionDetail";
 // import { useExhibitionDetail } from "../hooks/useExhibits";
-import { getExhibitionDetail } from "../api/exhibit";
+import { getExhibitionDetail, postComment } from "../api/exhibit";
 import { useQuery } from "react-query";
+import { Rate } from "antd";
 const data1 = [
   {
     id: "review1",
@@ -58,29 +59,46 @@ function Review({ name, date, content }) {
 }
 
 function DetailPage() {
+  const [value, setValue] = useState(5);
+  const [review, setReview] = useState("");
   const { id } = useParams();
   const { data, isLoading, error } = useQuery({
     queryKey: ["exhibitionDetail", id],
     queryFn: () => getExhibitionDetail(id),
   });
-
+  const handleChange = (value) => {
+    setValue(value);
+  };
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(review);
+    console.log(value);
+    postComment({
+      exhibitionId: id,
+      content: { rating: value, comment: review },
+    });
+  };
   const exhibitionData = data?.exhibitionDetail;
+  // console.log(exhibitionData);
   const placeData = data?.venue;
   return (
     <>
       <div className="detailCon">
         <div className="detailCon1">
-          <div className="titleName">
+          <div className="titleNameUp">
             {exhibitionData?.title}
-            <p className="subtitleName">새벽부터 황혼까지</p>
+            {/* <p className="subtitleName">새벽부터 황혼까지</p> */}
           </div>
           <div>
             <div className="poster1">
-              {/* <img
-                src={data.thumbnail}
+              <img
+                src={
+                  data?.exhibitionDetail.thumbnail ??
+                  "https://via.placeholder.com/150"
+                }
                 alt="poster"
-                style={{ width: "80px" }}
-              /> */}
+                style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              />
               <table className="poster-info">
                 <tr>
                   <td>장소</td>
@@ -154,7 +172,7 @@ function DetailPage() {
               <hr className="max" />
               <hr className="teen" />
               <div className="num num1">29</div>
-              <div style={{color: "#FF6038", fontWeight: "600"}}>20~30대</div>
+              <div style={{ color: "#FF6038", fontWeight: "600" }}>20~30대</div>
               <hr className="max2" />
               <hr className="twenty" />
               <div className="num num2">72</div>
@@ -177,6 +195,28 @@ function DetailPage() {
             <img className="all-arrow1" src={arrow} alt="arrow" />
           </div>
           <div className="review">
+            <form>
+              <Rate
+                onChange={setValue}
+                value={value}
+                style={{ color: "#FF6038" }}
+              />
+              <p className="review-title">리뷰 작성하기</p>
+              <input
+                className="review-input"
+                type="text"
+                value={review}
+                onChange={(e) => setReview(e.target.value)}
+                placeholder="리뷰를 작성해주세요."
+              />
+              <button
+                className="review-button"
+                type="submit"
+                onClick={onSubmit}
+              >
+                작성
+              </button>
+            </form>
             {data1.map((item) => (
               <Review
                 key={item.id}

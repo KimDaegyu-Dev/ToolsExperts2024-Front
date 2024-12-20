@@ -1,12 +1,11 @@
 .modal {
-  position: fixed;
-  left: 0;
+  position: inherit;
   width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  z-index: 100000;
 }
 .container1 {
   position: fixed;
@@ -219,12 +218,8 @@
   color: #f5f5ed;
 }
 .logout {
-  position: absolute;
-  top: 465px;
-  left: 150px;
+  position: relative;
 
   font-size: 10px;
   color: #333333;
-  text-decoration: underline;
-  
 }

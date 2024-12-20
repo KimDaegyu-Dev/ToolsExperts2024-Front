@@ -3,20 +3,28 @@ import "../styles/LoginPage.css";
 import { useState } from "react";
 import axios from "axios";
 import { login } from "../api/auth";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
+import { useGalleristContext } from "../contexts/ExhibitContext";
 
 function LoginPage() {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
-
+  const { isLogin, setIsLogin } = useGalleristContext();
+  console.log(isLogin);
+  const navigate = useNavigate();
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
-      const response = await login({ id, password }).then((res) => {
-        if (res.status === 200) {
-          window.location.href = "/";
+      if (!isLogin) {
+        const response = await login({ id, password });
+        if (response === 200) {
+          setIsLogin(true);
+          navigate("/landing");
         }
-      });
+      } else {
+        window.location.href = "/";
+        alert("이미 로그인 되어있습니다.");
+      }
     } catch (error) {
       console.error("Login failed:", error);
     }
@@ -29,7 +37,7 @@ function LoginPage() {
           <form>
             <input
               type="id"
-              placeholder="이메일 주소 또는 아이디"
+              placeholder="아이디"
               required
               value={id}
               onChange={(e) => setId(e.target.value)}

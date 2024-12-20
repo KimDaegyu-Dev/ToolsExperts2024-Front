@@ -8,6 +8,9 @@ import heart from "../assets/heart.png"; // 하트 아이콘
 import background from "../assets/background.png";
 import BackLine from "../assets/BackLine.png";
 import Lists from "../components/Lists.js";
+import { useQuery } from "react-query";
+import { getExhibits } from "../api/exhibit.js";
+import { Link } from "react-router-dom";
 
 const data1 = [
   {
@@ -98,16 +101,27 @@ const data1 = [
 //   },
 // ];
 
-function Best({ content, location, period, url }) {
+function Best({ id, content, location, period, thumbnail }) {
   return (
-    <a href={url} className="best-link">
-      <div className="bestBox">
+    <Link
+      to={`/detail/${id}`}
+      className="best-link"
+      style={{ textDecoration: "none" }}
+    >
+      <div
+        className="bestBox"
+        style={{
+          backgroundImage: `url(${thumbnail})`,
+          backgroundSize: "cover",
+          backgroundBlendMode: "darken",
+        }}
+      >
         <p className="best-content">{content}</p>
-        <img className="best-locationIcon" src={locationDot3} alt="location" />
+        <img className="best-locationIcon" src={locationDot2} alt="location" />
         <p className="best-location">{location}</p>
         <p className="best-period">{period}</p>
       </div>
-    </a>
+    </Link>
   );
 }
 // function List({ content, location, period, url }) {
@@ -134,6 +148,27 @@ function Best({ content, location, period, url }) {
 // }
 
 function LandingPage() {
+  // 원하는 startDate와 endDate 설정
+  const startDate = "20241122";
+  const endDate = "20241231";
+
+  // useQuery 훅을 사용해 데이터를 가져옴
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["exhibitions", { startDate, endDate }],
+    queryFn: () => getExhibits({ startDate, endDate }),
+  });
+  const bestExhibits = data?.slice(0, 3) || [];
+
+  // 데이터 로딩 중일 때 표시할 내용
+  if (isLoading) return <p>Loading...</p>;
+
+  // 오류 발생 시 표시할 내용
+  if (error) return <p>Error: {error.message}</p>;
+
+  // 데이터가 비어 있을 때 표시할 내용
+  if (!data || data.length === 0) {
+    return <p>No exhibitions available.</p>;
+  }
   return (
     <>
       <div className="container11">
@@ -148,13 +183,14 @@ function LandingPage() {
           <img className="BackLine3" src={BackLine} alt="배경 선" />
 
           <div className="bestContainer">
-            {data1.map((item) => (
+            {bestExhibits.map((item) => (
               <Best
                 key={item.id}
-                content={item.content}
-                location={item.location}
-                period={item.period}
-                favorites={item.favorites}
+                id={item.id}
+                content={item.title}
+                location={item.place}
+                period={`${item.start_date} ~ ${item.end_date}`} // 기간을 표시
+                thumbnail={item.thumbnail}
               />
             ))}
           </div>
@@ -167,7 +203,7 @@ function LandingPage() {
           <p className="location-text">부산광역시 전체</p>
         </div>
         <div className="container1-3">
-          <Lists />
+          <Lists data={data} />
           {/* <div className="listContainer">
             {data2.map((item) => (
               <List

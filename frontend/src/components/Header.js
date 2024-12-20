@@ -1,47 +1,62 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../components/Header.css";
 import search from "../assets/search.png";
 import heart from "../assets/heart.png";
 import profile from "../assets/profile.png";
 import MyPage from "../pages/MyPage";
 import { Link, useNavigate } from "react-router-dom";
+import { useGalleristContext } from "../contexts/ExhibitContext";
+import client from "../api/client";
+import { logout } from "../api/auth";
 
 export default function Header() {
   const [isMyPageOpen, setMyPageOpen] = useState(false);
   const navigate = useNavigate();
+  const { isLogin, setIsLogin } = useGalleristContext();
 
   const handleSearchFocus = () => {
     setMyPageOpen(false);
-    removeRipple();
+    // removeRipple();
   };
 
-  const removeRipple = () => {
-    const profileCircle = document.querySelector(".profile-circle");
-    const rippleExists = profileCircle?.querySelector(".ripple");
-    if (rippleExists) rippleExists.remove();
-  };
-
+  useEffect(() => {
+    const token = localStorage.getItem("jwtToken");
+    if (token) {
+      setIsLogin(true);
+      client.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+    }
+  }, []);
+  // const removeRipple = () => {
+  //   const profileCircle = document.querySelector(".profile-circle");
+  //   const rippleExists = profileCircle?.querySelector(".ripple");
+  //   if (rippleExists) rippleExists.remove();
+  // };
   const handleProfileClick = (e) => {
     e.preventDefault();
-    e.stopPropagation();
+    // e.stopPropagation();
 
-    const profileCircle = e.currentTarget;
-    const rippleExists = profileCircle.querySelector(".ripple");
+    // const profileCircle = e.currentTarget;
+    // const rippleExists = profileCircle.querySelector(".ripple");
 
-    if (rippleExists) {
-      rippleExists.remove();
-    } else {
-      const ripple = document.createElement("span");
-      ripple.classList.add("ripple");
-      profileCircle.appendChild(ripple);
-    }
+    // if (rippleExists) {
+    //   rippleExists.remove();
+    // } else {
+    //   const ripple = document.createElement("span");
+    //   ripple.classList.add("ripple");
+    //   profileCircle.appendChild(ripple);
+    // }
 
     setMyPageOpen((prev) => !prev);
+  };
+  const handleLogout = () => {
+    localStorage.removeItem("jwtToken");
+    window.location.reload();
+    logout();
   };
 
   const handleNavigation = (path) => {
     setMyPageOpen(false);
-    removeRipple();
+    // removeRipple();
     navigate(path);
   };
 
@@ -66,7 +81,7 @@ export default function Header() {
         <form className="search">
           <input
             className="search-text"
-            type="text"
+            type="seaarch-text"
             spellCheck="false"
             onFocus={handleSearchFocus}
           />
@@ -74,20 +89,28 @@ export default function Header() {
         <a>
           <img className="search-icon" src={search} alt="search" />
         </a>
-        <a>
-          <img className="heart-icon" src={heart} alt="heart" />
-        </a>
-        <a className="profile-circle" href="#" onClick={handleProfileClick}>
-          <img className="profile-icon" src={profile} alt="profile" />
-        </a>
+        {isLogin ? (
+          <>
+            <a>
+              <img className="heart-icon" src={heart} alt="heart" />
+            </a>
+            <a className="profile-circle" href="#" onClick={handleLogout}>
+              <img className="profile-icon" src={profile} alt="profile" />
+            </a>
+          </>
+        ) : (
+          <>
+            <Link to="/login" style={{ textDecoration: "none" }}>
+              <div className="header-login">로그인</div>
+            </Link>
+            <Link to="/register" style={{ textDecoration: "none" }}>
+              <div className="header-register">회원가입</div>
+            </Link>
+          </>
+        )}
+
+        {isMyPageOpen && <MyPage />}
       </header>
-      {isMyPageOpen && (
-        <div className="modal">
-          <div className="modal-content">
-            <MyPage />
-          </div>
-        </div>
-      )}
     </div>
   );
 }

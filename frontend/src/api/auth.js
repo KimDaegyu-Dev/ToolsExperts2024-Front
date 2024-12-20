@@ -8,9 +8,7 @@ export const login = async ({ id, password }) => {
         client.defaults.headers.common[
           "Authorization"
         ] = `Bearer ${res.data.token}`;
-        if (res.status === 200) {
-          window.location.href = "/";
-        }
+        localStorage.setItem("jwtToken", res.data.token);
         return res;
       });
     return response.status;

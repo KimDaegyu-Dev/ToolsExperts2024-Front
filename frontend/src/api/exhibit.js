@@ -32,3 +32,22 @@ export async function getExhibitionDetail(id) {
     throw error;
   }
 }
+
+/**전시회 댓글 작성*/
+
+export async function postComment({ exhibitionId, content }) {
+  try {
+    console.log(exhibitionId);
+    const response = await client.post(
+      `/exhibitions/${exhibitionId}/rate`,
+      content
+    );
+    return response.data;
+  } catch (error) {
+    console.error(
+      `Failed to post comment for exhibition ID: ${exhibitionId}`,
+      error
+    );
+    throw error;
+  }
+}

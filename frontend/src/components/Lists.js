@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 function List({ content, id, location, period, thumbnail }) {
   return (
     <a className="list-link">
-      <Link to={`/detail/${id}`}>
+      <Link to={`/detail/${id}`} style={{ textDecoration: "none" }}>
         <div className="listItem">
           <img className="listBox" src={thumbnail}></img>
           <div className="listText">
@@ -33,28 +33,8 @@ function List({ content, id, location, period, thumbnail }) {
 }
 
 // 전시회 목록을 렌더링하는 메인 컴포넌트
-export default function Lists() {
-  // 원하는 startDate와 endDate 설정
-  const startDate = "20241122";
-  const endDate = "20241231";
-
-  // useQuery 훅을 사용해 데이터를 가져옴
-  const { data, isLoading, error } = useQuery({
-    queryKey: ["exhibitions", { startDate, endDate }],
-    queryFn: () => getExhibits({ startDate, endDate }),
-  });
-
-  // 데이터 로딩 중일 때 표시할 내용
-  if (isLoading) return <p>Loading...</p>;
-
-  // 오류 발생 시 표시할 내용
-  if (error) return <p>Error: {error.message}</p>;
-
-  // 데이터가 비어 있을 때 표시할 내용
-  if (!data || data.length === 0) {
-    return <p>No exhibitions available.</p>;
-  }
-
+export default function Lists({ data }) {
+  // console.log(data);
   // 데이터가 정상적으로 로드되었을 때 전시회 목록을 렌더링
   return (
     <div className="container11">
@@ -63,10 +43,12 @@ export default function Lists() {
           {data.map((item) => (
             <List
               key={item.id}
-              id={item.id}
+              id={item.id ?? item.seq}
               content={item.title}
-              location={item.place}
-              period={`${item.start_date} ~ ${item.end_date}`} // 기간을 표시
+              location={item.place ?? item.Venue.name}
+              period={`${item.start_date ?? item.startDate} ~ ${
+                item.end_date ?? item.endDate
+              }`} // 기간을 표시
               thumbnail={item.thumbnail}
             />
           ))}

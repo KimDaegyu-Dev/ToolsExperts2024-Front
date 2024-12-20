@@ -1,36 +1,28 @@
 import React, { createContext, useContext, useState } from "react";
 
-const ExhibitContext = createContext(null);
+const GalleristContext = createContext(null);
 
-export function ExhibitContextProvider({ children }) {
+export function GalleristContextProvider({ children }) {
   const [user, setUser] = useState(null);
-  const [survey, setSurvey] = useState({
-    gender: "",
-    age: new Date(),
-    disease: [],
-    stroke: [],
-    familyStroke: [],
-    smoking: [],
-    drinking: [],
-  });
+  const [isLogin, setIsLogin] = useState(false);
 
   return (
-    <ExhibitContext.Provider
+    <GalleristContext.Provider
       value={{
         user,
         setUser,
-        survey,
-        setSurvey,
+        isLogin,
+        setIsLogin,
       }}
       children={children}
     />
   );
 }
 
-export function useExhibitContext() {
-  const exhibitContext = useContext(ExhibitContext);
-  if (!exhibitContext) {
+export function useGalleristContext() {
+  const galleristContext = useContext(GalleristContext);
+  if (!galleristContext) {
     throw new Error("ExhibitContext.Provider is not found");
   }
-  return exhibitContext;
+  return galleristContext;
 }

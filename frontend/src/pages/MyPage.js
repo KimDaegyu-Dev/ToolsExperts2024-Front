@@ -1,8 +1,14 @@
 import React from "react";
 import "../styles/MyPage.css";
 import roundHeart from "../assets/roundHeart.png";
+import { logout } from "../api/auth";
 
 function MyPage() {
+  const handleLogout = () => {
+    localStorage.removeItem("jwtToken");
+    window.location.reload();
+    logout();
+  };
   return (
     <>
       <div className="modal">
@@ -34,9 +40,9 @@ function MyPage() {
             <img className="roundHeart1" src={roundHeart} alt="roundHeart" />
             <div>내가 남긴 리뷰</div>
           </a>
-          <a href="#" className="logout">
+          <div className="logout" onClick={() => console.log(1)}>
             로그아웃
-          </a>
+          </div>
         </div>
       </div>
     </>

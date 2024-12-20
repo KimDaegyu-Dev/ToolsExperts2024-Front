@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/LoginPage.css";
 import { useState } from "react";
-import axios from "axios";
-import { login, register } from "../api/auth";
+import { register } from "../api/auth";
+import { useNavigate } from "react-router-dom";
 function RegisterPage() {
   const [id, setId] = useState("");
   const [password, setPassword] = useState("");
@@ -10,7 +10,7 @@ function RegisterPage() {
   const [user_name, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
-
+  const navigate = useNavigate();
   const handleLogin = async (event) => {
     event.preventDefault();
     try {
@@ -22,9 +22,10 @@ function RegisterPage() {
         email,
         phone,
       });
-      console.log("Login successful:", response.data);
+      navigate("/login");
+      console.log("Register successful:", response.data);
     } catch (error) {
-      console.error("Login failed:", error);
+      console.error("Register failed:", error);
     }
   };
   return (

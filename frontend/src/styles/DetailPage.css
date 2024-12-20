@@ -9,8 +9,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   margin-top: 110px;
+  position: relative;
+  /* left: -90px; */
 }
 .detailCon2 {
   display: flex;
@@ -21,19 +23,17 @@
   overflow: hidden;
 }
 
-.titleName {
-  position: relative;
-  width: 400px;
+.titleNameUp {
+  /* position: relative; */
+  width: 100%;
   height: 60px;
-  top: 0%;
-  left: -90%;
   /* top: 100px;
   left: 210px; */
 
   font-size: 30px;
   font-weight: 600;
   line-height: 36px;
-  text-align: left;
+  /* text-align: left; */
   color: white;
 }
 .subtitleName {
@@ -428,7 +428,7 @@
   font-weight: 500;
   line-height: 22px;
   text-align: left;
-  color: #BEBEBE;
+  color: #bebebe;
 }
 .review-content {
   position: relative;
